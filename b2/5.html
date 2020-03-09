@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+  <title>5th page</title>
+</head>
+<body>
+  <div class="container-fluid pb-2" style="background-color: #eee;">
+    <h4 class="text-center">ISI RUMAH</h4>
+
+    <div id="d4">
+
+      <div class="form-group">
+        <label for="">D4. Apakah status pemilikan Tempat Kediaman ini? </label>
+        <select id="jenisrumah" class="form-control">
+          <option value="">-Sila Pilih-</option>
+          <option value="1">Persendirian</option>
+          <option value="2">Persendirian (TK disewa)</option>
+          <option value="3">Kerajaan</option>
+          <option value="4">Swasta</option>
+          <option value="5">Koperasi / Syarikat kerjasama </option>
+          <option value="non">Lain-lain (Nyatakan) </option>
+        </select>
+      </div>
+      <div id="c1" style="display: none;">
+        <div class="form-group">
+          <input type="text" class="form-control" id="c1-b" placeholder="Sila Nyatakan" style="">
+        </div>
+      </div>
+    </div>
+    <div id="d5">
+      <div class="form-group">
+        <label for="">D5. Apakah cara perolehan Tempat Kediaman ini? </label>
+        <select id="" class="form-control">
+          <option value="">-Sila Pilih-</option>
+          <option value="1">Hadiah / Pusaka</option>
+          <option value="2">Pembiayaan / Pembinaan sendiri </option>
+          <option value="3">Pembelian tunai</option>
+          <option value="4">Pinjaman Institusi Kewangan (cth: LPPSA / Bank</option>
+          <option value="5">Bantuan Kerajaan / Swasta / NGO </option>
+        </select>
+      </div>
+    </div>
+    <div id="d6">
+      <div class="form-group">
+        <label for="">D6. Adakah sesiapa dalam Isi Rumah ini memiliki Tempat Kediaman ini? </label>
+        <select id="" class="form-control">
+          <option value="">-Sila Pilih-</option>
+          <option value="1">Ya</option>
+          <option value="2">Tidak</option>
+        </select>
+      </div>
+    </div>
+    <div id="d7">
+      <div class="form-group">
+        <label for="">D7. Adakah sesiapa dalam Isi Rumah ini membayar sewa untuk Tempat Kediaman ini? </label>
+        <select id="" class="form-control">
+          <option value="">-Sila Pilih-</option>
+          <option value="1">Ya, berperabots</option>
+          <option value="2">Ya, tanpa perabot</option>
+          <option value="2">Tidak</option>
+        </select>
+      </div>
+    </div>
+    <div id="d8">
+      <div class="form-group">
+        <label for="">D8. Berapakah sewa bulanan semasa yang dibayar untuk Tempat Kediaman ini? </label>
+        <select id="" class="form-control">
+          <option value="">-Sila Pilih-</option>
+          <option value="1">RM500 dan kurang </option>
+          <option value="2">RM501 - RM999 </option>
+          <option value="3">RM1,000 - RM1,499 </option>
+          <option value="4">RM1,500 - RM1,999 </option>
+          <option value="5">RM2,000 - RM2,499 </option>
+          <option value="6">RM2,500 - RM2,999 </option>
+          <option value="7">RM3,000 dan lebih </option>
+        </select>
+      </div>
+    </div>
+    <div id="d9">
+      <div class="form-group">
+        <label for="">D9. Berapakah anggaran jumlah pendapatan kasar bulanan yang diterima oleh Isi Rumah ini daripada pelbagai sumber? </label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">RM</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Sila nyatakan">
+          <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="d10">
+      <div id="d10-a">
+        <div class="form-group">
+          <label for="">D10.(a) Adakah sesiapa dalam Isi Rumah ini menjalankan aktiviti pertanian? </label>
+          <select id="" class="form-control">
+            <option value="">-Sila Pilih-</option>
+            <option value="1">Ya</option>
+            <option value="2">Tidak</option>
+          </select>
+        </div>
+      </div>
+      <div id="d10-b">
+        <div class="form-group">
+          <label for="">D10.(a)  Sekiranya Ya, apakah aktiviti pertanian tersebut? </label>
+          <p>UTAMA = 1</p>
+          <p>SAMPINGAN = 2</p>
+          <p>TIADA = 3</p>
+          <table style="width:100%">
+            <tr>
+              <th>Makanan</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+            <tr>
+              <td>(i.) Padi </td>
+              <td><input name="d10atf" type="radio" value="1"></td>
+              <td><input name="d10atf" type="radio" value="0"></td>
+              <td><input name="d10atf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td>(ii.) Buah-buahan </td>
+              <td><input name="d10btf" type="radio" value="1"></td>
+              <td><input name="d10btf" type="radio" value="0"></td>
+              <td><input name="d10btf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td>(iii.) Sayur-sayuran </td>
+              <td><input name="d10ctf" type="radio" value="1"></td>
+              <td><input name="d10ctf" type="radio" value="0"></td>
+              <td><input name="d10ctf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td>(iv.) Lain-lain </td>
+              <td><input name="d10dtf" type="radio" value="1"></td>
+              <td><input name="d10dtf" type="radio" value="0"></td>
+              <td><input name="d10dtf" type="radio" value="0"></td>
+            </tr>
+          </table>
+          <input type="text" class="form-control" id="c5f-lain" placeholder="nyatakan" style="display: none;">
+        </div>
+        <div class="form-group">
+          <table style="width:100%">
+            <tr>
+              <th>Komoditi</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+            <tr>
+              <td>(i.) Kelapa sawit </td>
+              <td><input name="d10etf" type="radio" value="1"></td>
+              <td><input name="d10etf" type="radio" value="0"></td>
+              <td><input name="d10etf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td>(ii.) Getah </td>
+              <td><input name="d10ftf" type="radio" value="1"></td>
+              <td><input name="d10ftf" type="radio" value="0"></td>
+              <td><input name="d10ftf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td>(iv.) Lain-lain </td>
+              <td><input name="d10gtf" type="radio" value="1"></td>
+              <td><input name="d10gtf" type="radio" value="0"></td>
+              <td><input name="d10gtf" type="radio" value="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="form-group">
+          <table style="width:100%">
+            <tr>
+              <th>Ternakan</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+            <tr>
+              <td>(i.) Ruminan </td>
+              <td><input name="d10htf" type="radio" value="1"></td>
+              <td><input name="d10htf" type="radio" value="0"></td>
+              <td><input name="d10htf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td>(ii.) Bukan ruminan  </td>
+              <td><input name="d10itf" type="radio" value="1"></td>
+              <td><input name="d10itf" type="radio" value="0"></td>
+              <td><input name="d10itf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td>(iv.) Babi </td>
+              <td><input name="d10jtf" type="radio" value="1"></td>
+              <td><input name="d10jtf" type="radio" value="0"></td>
+              <td><input name="d10jtf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td>(iv.) lain-lain </td>
+              <td><input name="d10ktf" type="radio" value="1"></td>
+              <td><input name="d10ktf" type="radio" value="0"></td>
+              <td><input name="d10ktf" type="radio" value="0"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="form-group">
+          <table style="width:100%">
+            <tr>
+              <th>Perikanan</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+            <tr>
+              <td>(i.) Tangkapan marin  </td>
+              <td><input name="d10ltf" type="radio" value="1"></td>
+              <td><input name="d10ltf" type="radio" value="0"></td>
+              <td><input name="d10ltf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td>(ii.) Akuakultur laut / Air tawar  </td>
+              <td><input name="d10mtf" type="radio" value="1"></td>
+              <td><input name="d10mtf" type="radio" value="0"></td>
+              <td><input name="d10mtf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td> Hasil Hutan  </td>
+              <td><input name="d10ntf" type="radio" value="1"></td>
+              <td><input name="d10ntf" type="radio" value="0"></td>
+              <td><input name="d10ntf" type="radio" value="0"></td>
+            </tr>
+            <tr>
+              <td> Industri asas tani  </td>
+              <td><input name="d10otf" type="radio" value="1"></td>
+              <td><input name="d10otf" type="radio" value="0"></td>
+              <td><input name="d10otf" type="radio" value="0"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="d10-c">
+        <div class="form-group">
+          <label for="">(c). Berapakah pendapatan tahunan pada 12 bulan yang lalu diterima daripada aktiviti pertanian tersebut? </label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">RM</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Sila nyatakan">
+            <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="d11">
+      <p>
+        D11.(a) Adakah kawasan ini mempunyai akses kepada pengangkutan awam berikut?
+        Sekiranya Ya, tandakan pada kod yang sesuai bagi jarak yang terhampir dari Tempat Kediaman ini.
+      </p>
+      <!-- table -->
+      <table style="width:100%">
+        <tr>
+          <th></th>
+          <th>Ya</th>
+          <th>Tidak</th>
+        </tr>
+        <tr>
+          <td>(i.) Dalam rumah waktu siang </td>
+          <td><input name="c5btf" type="radio" value="1"></td>
+          <td><input name="c5btf" type="radio" value="0"></td>
+        </tr>
+        <tr>
+          <td>(ii.) Dalam rumah waktu malam </td>
+          <td><input name="c5ctf" type="radio" value="1"></td>
+          <td><input name="c5ctf" type="radio" value="0"></td>
+        </tr>
+        <tr>
+          <td>(iii.) Luar rumah waktu siang </td>
+          <td><input name="c5dtf" type="radio" value="1"></td>
+          <td><input name="c5dtf" type="radio" value="0"></td>
+        </tr>
+        <tr>
+          <td>(iv.) Luar rumah waktu malam </td>
+          <td><input name="c5etf" type="radio" value="1"></td>
+          <td><input name="c5etf" type="radio" value="0"></td>
+        </tr>
+        <tr>
+          <td>(iv.) Tempat kerja </td>
+          <td><input name="c5ftf" type="radio" value="1"></td>
+          <td><input name="c5ftf" type="radio" value="0"></td>
+        </tr>
+      </table>
+      <div id="d11-b" class="pt-5">
+        <div class="form-group">
+          <label for="">(b) Dalam sebulan yang lepas, pernahkah berlaku jenayah di Tempat Kediaman / kawasan anda? </label>
+          <select id="" class="form-control">
+            <option value="">-Sila Pilih-</option>
+            <option value="1">Ya</option>
+            <option value="2">Tidak</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="container p-2">
+    <a href="4.html" class="float-leftright btn btn-primary">Back</a>
+    <a href="6.html" class="float-right btn btn-primary">Next</a>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="../myjs.js"></script>
+</body>
+</html>
