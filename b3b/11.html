@@ -7,14 +7,6 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-  <style media="screen">
-  input.g3kali{
-    width:3rem;
-    border: 2px solid #c2c2c2;
-    border-radius: 4px;
-    text-align: center;
-  }
-  </style>
   <title>9th page</title>
 </head>
 <body>
@@ -74,41 +66,61 @@
     </div>
     <div id="semak1" class="form-group">
       <h4>PERAKUAN MAKLUMAT OLEH RESPONDEN</h4>
-      <p>H3.(c) Di manakah lokasi pilihan Tempat Kediaman yang ingin dimiliki oleh anda / ahli Isi Rumah ini? </p>
       <label for="">Nama</label>
       <input type="number" class="form-control" id="" placeholder="Nama">
       <label for="">Nombor Pengenalan diri</label>
       <input type="number" class="form-control" id="" placeholder="Nombor Pengenalan diri">
-      <label for="">???Tandatangan</label>
-      <input type="number" class="form-control" id="" placeholder="???Tandatangan">
       <label for="">Tarikh</label>
       <input type="date" class="form-control" id="" placeholder="Tarikh">
       <p>Saya mengesahkan maklumat yang diberikan dalam borang soal selidik ini adalah benar, lengkap dan tepat. </p>
     </div>
     <div id="semak2" class="form-group">
       <h4>ULASAN PEMBANCI</h4>
-      <p>H3.(c) Di manakah lokasi pilihan Tempat Kediaman yang ingin dimiliki oleh anda / ahli Isi Rumah ini? </p>
-      <label for="">Ulasan</label>
-      <textarea class="form-control" id="" rows="3"></textarea>
-      <label for="">Maklumat lengkap hanya diperoleh selepas lawatan yang ke</label>
-      <input type="number" class="form-control" id="" placeholder="kali">
-      <label for="">Tempoh Pembancian</label>
-      <label for="">Tarikh</label>
-      <input type="date" class="form-control" id="" placeholder="Tarikh">
-    </div>
-    <div id="semak3" class="form-group">
-      <p>Tempoh Pembancian</p>
-      <label for="">Tarikh</label>
-      <input type="date" class="form-control" id="" placeholder="Tarikh">
-      <p>Masa:</p>
-      <label for="">Dari</label>
-      <input type="time" class="form-control" id="dari" placeholder="Dari">
-      <label for="">Hingga</label>
-      <input type="time" class="form-control" id="hingga" placeholder="Hingga">
-      <label for="">Jumlah(minit)</label>
-      <input type="number" class="form-control" id="jumlahminit" placeholder="Jumlah(minit)" readonly>
-      <label for="">Status lawatan</label>
-      <input type="text" class="form-control" id="" placeholder="Status lawatan">
+      <div class="form-group">
+        <label for="">Ulasan</label>
+        <textarea class="form-control" id="" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <p class="d-inline">Maklumat lengkap hanya diperoleh selepas lawatan yang kali ke</p>
+        <select type="number" class="form-control d-inline w-25" id="tambah_visitform" placeholder="kali">
+          <!-- <option value="">-Pilih-</option> -->
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </div>
+      <div class="card mb-2" id="visitcard1">
+        <div class="card-header">
+          <h5 class="d-inline my-auto px-2"> Lawatan ke - 1 </h5>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="">Tarikh</label>
+            <input type="date" class="form-control" id="" placeholder="Tarikh">
+          </div>
+          <div class="form-group">
+            <label for="">Dari</label>
+            <input type="time" class="form-control" id="dari" placeholder="Dari">
+          </div>
+          <div class="form-group">
+            <label for="">Hingga</label>
+            <input type="time" class="form-control" id="hingga" placeholder="Hingga">
+          </div>
+          <div class="form-group">
+            <label for="">Jumlah(minit)</label>
+            <input type="number" class="form-control" id="jumlahminit" placeholder="Jumlah(minit)" readonly>
+          </div>
+          <div class="form-group">
+            <label for="">Status lawatan</label>
+            <input type="text" class="form-control" placeholder="Status lawatan">
+          </div>
+        </div>
+      </div>
+      <div class="" id="tempohbanci">
+      </div>
     </div>
     <div id="ltk" class="">
       <p class="mt-3">Terima kasih di atas masa dan kerjasama anda, dan bagi membantu Jabatan Perangkaan Malaysia membuat unjuran dan anggaran
@@ -122,15 +134,15 @@
   </div>
 
   <div class="container p-2">
-    <a href="10.html" class="float-leftright btn btn-primary">Back</a>
+    <a href="10.html" id="11to10" class="float-leftright btn btn-primary">Back</a>
     <a href="../profile.html" onclick="alert('data submitted')"  class="float-right btn btn-primary">Submit</a>
   </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="../jquery-3.4.1.min.js" ></script>
-  <script src="../popper.min.js" ></script>
-  <script src="../bootstrap/js/bootstrap.min.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="../myjs.js"></script>
 </body>
 </html>

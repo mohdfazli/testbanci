@@ -177,11 +177,61 @@ $( ".lain-c7f" ).click(function() {
 
 //------------------tambah borang---------//
 
+// $(document).ready(function(){
+//   $("#tambahb").click(function(){
+//     var $div = $('div[id^="fcard"]:last');
+//     var num = parseInt( $div.prop("id").match(/\d+/g), 10 )+1;
+//     var $klon = $div.clone().prop('id', 'fcard'+num );
+//     $klon.insertAfter($div);
+//     $('div[id^="fcard"]:last').children("div").first().children("h5").text("Nombor Ahli: 00"+num);
+//     $("#tambahb").text("Tambah Ahli ke "+(num+1));
+//   });
+// });
+
+//borang setiap ahli isi rumah
+
 $(document).ready(function(){
-  $("#tambahb").click(function(){
-    $("#form005").clone().insertBefore("#tambahb");
+  $("#cardspace").empty();
+  var count = 2 ;
+  tmember = localStorage.k3total;
+  while(count<tmember){
+    vcard_ahli();
+    count = count+1;
+  }
+});
+
+function vcard_ahli(){
+  var $div = $('div[id^="fcard"]:last');
+  var num = parseInt( $div.prop("id").match(/\d+/g), 10 )+1;
+  var $klon = $div.clone().prop('id', 'fcard'+num );
+  $("#cardspace").append($klon);
+  $('div[id^="fcard"]:last').children("div").first().children("h5").text("Nombor Ahli: 00"+num);
+}
+
+//borang setiap lawatan banci
+$(document).ready(function(){
+  $("#tambah_visitform").change(function(){
+    $("#tempohbanci").empty();
+    var count = 1 ;
+    // var tvisit = parseInt($("#tambah_visitform").val());
+    tvisit = $("#tambah_visitform").val();
+    while(count<tvisit){
+      vcard();
+      count=count+1;
+    }
   });
 });
+
+function vcard(){
+  var $div = $('div[id^="visitcard"]:last');
+  var num = parseInt( $div.prop("id").match(/\d+/g), 10 )+1;
+  var $klon = $div.clone().prop('id', 'visitcard'+num );
+  $("#tempohbanci").append($klon);
+  $('div[id^="visitcard"]:last').children("div").first().children("h5").text("Lawatan ke - "+num);
+}
+
+
+
 
 //-------------dirty show hide start--
 
@@ -270,7 +320,6 @@ $(".c2-q").click(function() {
     $("#c6").css( "display", "block" );
     $("#c7").css( "display", "block" );
     $("#c8").css( "display", "block" );
-    $("#nextend").attr("href", "3.html");
 
 
   }
@@ -295,7 +344,118 @@ $( "#c1c" ).change(function() {
   }
 });
 
+$( "#k3-p, #k3-l" ).keyup(function() {
+  var p = parseInt($("#k3-p").val());
+  var l = parseInt($("#k3-l").val());
+  var total = p+l;
+  $("#k3-total").val(total);
+  localStorage.k3total = total;
+});
+
+//--------------read console.log(require('util').inspect(
+$('body').ready(function(){
+  $('#mykad').val(localStorage.mykad);
+  $('#e4q').val(localStorage.gender);
+  $('#e5a').val(localStorage.dob);
+  $('#e5b').val(localStorage.age);
+  return false;
+});
+$('#mykad').change(function(){
+  /*get value from form*/
+  var mykad = $('#mykad').val();
+  localStorage.mykad = mykad;
+  var dob = mykad.substr(0,6); 	 // eg: 850510 - 10/05/1985
+  var code = mykad.substr(6,2);	 // eg: 14 - Wilayah Persekutuan
+  var icno = mykad.substr(8,4);	 // eg: 0000 - ic number
+
+  //check gender using ic number
+  if (icno % 2 == 0){
+    $('#e4q').val("Perempuan");
+    localStorage.gender = "Perempuan";
+  }
+  else{
+    $('#e4q').val("Lelaki");
+    localStorage.gender = "Lelaki";
+  }
+
+  //arrange date from ic number
+  var first = dob.substr(0, 2);  // 85
+  var second = dob.substr(2, 2); // 05
+  var third = dob.substr(4,4);   // 10
+
+
+  //convert 850510 to 85-05-10 : dateformat - yy-mm-dd
+  var dateraw = first+'-'+second+'-'+third;
+  $('#e5a').val(dateraw);
+  localStorage.dob = dateraw;
+
+  var today = new Date();
+    var birthDate = new Date($('#e5a').val());
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    $('#e5b').val(age);
+    localStorage.age = age;
+
+  //calculate age by dateraw : eg: 33
+  // var date_convert_age = moment().diff(dateraw, 'years');
+  // alert(date_convert_age);
+  //convert full date 85-05-10 to 1985-05-10
+  // var year = moment(dateraw,"YY-MM-DD").format("YYYY");
+  // $('#day_date').val(third);
+  // $('#month_date').val(second);
+  // $('#year_date').val(year);
+  return false;
+});
+
+
 //-------------dirty show hide end
+
+//paging warga emas
+if (localStorage.age <= 60){
+  $("#9to10").attr("href", "11.html");
+  $("#11to10").attr("href", "9.html");
+}
+
+//perempuan umur > 10
+if (localStorage.gender == "Lelaki" || localStorage.age < 10){
+  $("#E28").hide();
+}
+
+$( "#e19q" ).change(function() {
+  if(this.value=="1"){
+    $("#E20").hide();
+    $("#E21").hide();
+    $("#E22").hide();
+  }
+  else{
+    $("#E20").show();
+    $("#E21").show();
+    $("#E22").show();
+  }
+});
+
+$( "#e20q" ).change(function() {
+  if(this.value=="1"){
+    $("#E21").hide();
+    $("#E22").hide();
+    $("#E23").show();
+    $("#E24").show();
+    $("#E25").show();
+    $("#E26").show();
+  }
+  else{
+    $("#E21").show();
+    $("#E22").show();
+    $("#E23").hide();
+    $("#E24").hide();
+    $("#E25").hide();
+    $("#E26").hide();
+  }
+});
+
 
 // $("p").append("Some appended text."
 // $(document).ready(function(){
