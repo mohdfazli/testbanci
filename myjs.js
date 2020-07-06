@@ -381,7 +381,7 @@ $('#mykad').change(function(){
   //arrange date from ic number
   var first = dob.substr(0, 2);  // 85
   var second = dob.substr(2, 2); // 05
-  var third = dob.substr(4,4);   // 10
+  var third = dob.substr(4,2);   // 10
 
 
   //convert 850510 to 85-05-10 : dateformat - yy-mm-dd
