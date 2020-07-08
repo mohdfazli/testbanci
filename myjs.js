@@ -354,16 +354,19 @@ $( "#k3-p, #k3-l" ).keyup(function() {
 
 //--------------read console.log(require('util').inspect(
 $('body').ready(function(){
-  $('#mykad').val(localStorage.mykad);
-  $('#e4q').val(localStorage.gender);
-  $('#e5a').val(localStorage.dob);
-  $('#e5b').val(localStorage.age);
+
+  showf(localStorage.fid);
+//   $('#mykad').val(localStorage.mykad);
+//   $('#e4q').val(localStorage.gender);
+//   $('#e5a').val(localStorage.dob);
+//   $('#e5b').val(localStorage.age);
   return false;
 });
 $('#mykad').change(function(){
   /*get value from form*/
   var mykad = $('#mykad').val();
-  localStorage.mykad = mykad;
+  // localStorage.mykad = mykad;
+  formid(localStorage.fid);
   var dob = mykad.substr(0,6); 	 // eg: 850510 - 10/05/1985
   var code = mykad.substr(6,2);	 // eg: 14 - Wilayah Persekutuan
   var icno = mykad.substr(8,4);	 // eg: 0000 - ic number
@@ -371,11 +374,11 @@ $('#mykad').change(function(){
   //check gender using ic number
   if (icno % 2 == 0){
     $('#e4q').val("Perempuan");
-    localStorage.gender = "Perempuan";
+    // localStorage.gender = "Perempuan";
   }
   else{
     $('#e4q').val("Lelaki");
-    localStorage.gender = "Lelaki";
+    // localStorage.gender = "Lelaki";
   }
 
   //arrange date from ic number
@@ -399,14 +402,14 @@ $('#mykad').change(function(){
     $('#e5b').val(age);
     localStorage.age = age;
 
-  //calculate age by dateraw : eg: 33
-  // var date_convert_age = moment().diff(dateraw, 'years');
-  // alert(date_convert_age);
-  //convert full date 85-05-10 to 1985-05-10
-  // var year = moment(dateraw,"YY-MM-DD").format("YYYY");
-  // $('#day_date').val(third);
-  // $('#month_date').val(second);
-  // $('#year_date').val(year);
+  // calculate age by dateraw : eg: 33
+  var date_convert_age = moment().diff(dateraw, 'years');
+  alert(date_convert_age);
+  // convert full date 85-05-10 to 1985-05-10
+  var year = moment(dateraw,"YY-MM-DD").format("YYYY");
+  $('#day_date').val(third);
+  $('#month_date').val(second);
+  $('#year_date').val(year);
   return false;
 });
 
@@ -455,6 +458,22 @@ $( "#e20q" ).change(function() {
     $("#E26").hide();
   }
 });
+
+
+// increment tvisit in local storage
+function formid(fid){
+
+    myObj = JSON.parse(window.localStorage.getItem('b2b'));
+    myObj.f[(fid-1)].mykad = $('#mykad').val();
+    myJSON = JSON.stringify(myObj);
+    localStorage.setItem("b2b", myJSON);
+}
+
+function showf(fid){
+  myObj = JSON.parse(window.localStorage.getItem('b2b'));
+  $('#mykad').val( myObj.f[(fid-1)].mykad ); //get mykad into input box
+}
+
 
 
 // $("p").append("Some appended text."
