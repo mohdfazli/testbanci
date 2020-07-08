@@ -352,18 +352,18 @@ $( "#k3-p, #k3-l" ).keyup(function() {
   localStorage.k3total = total;
 });
 
-//--------------read console.log(require('util').inspect(
+//show data on 3B input form that exist in local storage
 $('body').ready(function(){
-
   showf(localStorage.fid);
-//   $('#mykad').val(localStorage.mykad);
-//   $('#e4q').val(localStorage.gender);
-//   $('#e5a').val(localStorage.dob);
-//   $('#e5b').val(localStorage.age);
+  //   $('#mykad').val(localStorage.mykad);
+  //   $('#e4q').val(localStorage.gender);
+  //   $('#e5a').val(localStorage.dob);
+  //   $('#e5b').val(localStorage.age);
   return false;
 });
+
+//update data inside local storage for 3B form whenever the input is changed
 $('#mykad').change(function(){
-  /*get value from form*/
   var mykad = $('#mykad').val();
   // localStorage.mykad = mykad;
   formid(localStorage.fid);
@@ -393,14 +393,14 @@ $('#mykad').change(function(){
   localStorage.dob = dateraw;
 
   var today = new Date();
-    var birthDate = new Date($('#e5a').val());
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
-    $('#e5b').val(age);
-    localStorage.age = age;
+  var birthDate = new Date($('#e5a').val());
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  $('#e5b').val(age);
+  localStorage.age = age;
 
   // calculate age by dateraw : eg: 33
   var date_convert_age = moment().diff(dateraw, 'years');
@@ -413,8 +413,6 @@ $('#mykad').change(function(){
   return false;
 });
 
-
-//-------------dirty show hide end
 
 //paging warga emas
 if (localStorage.age <= 60){
@@ -459,22 +457,19 @@ $( "#e20q" ).change(function() {
   }
 });
 
-
-// increment tvisit in local storage
+// insert new form data(mykad) into local storage
 function formid(fid){
-
-    myObj = JSON.parse(window.localStorage.getItem('b2b'));
-    myObj.f[(fid-1)].mykad = $('#mykad').val();
-    myJSON = JSON.stringify(myObj);
-    localStorage.setItem("b2b", myJSON);
+  myObj = JSON.parse(window.localStorage.getItem('b2b'));
+  myObj.f[(fid-1)].mykad = $('#mykad').val();
+  myJSON = JSON.stringify(myObj);
+  localStorage.setItem("b2b", myJSON);
 }
 
+// show data on input box of 3B form that exist from stored local storage
 function showf(fid){
   myObj = JSON.parse(window.localStorage.getItem('b2b'));
-  $('#mykad').val( myObj.f[(fid-1)].mykad ); //get mykad into input box
+  $('#mykad').val( myObj.f[(fid-1)].mykad ); //show mykad into input box
 }
-
-
 
 // $("p").append("Some appended text."
 // $(document).ready(function(){
