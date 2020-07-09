@@ -364,9 +364,14 @@ $('body').ready(function(){
 
 //update data inside local storage for 3B form whenever the input is changed
 $('#mykad').change(function(){
+  formid(localStorage.fid);
+  reshowformdata()
+  return false;
+});
+
+function reshowformdata(){
   var mykad = $('#mykad').val();
   // localStorage.mykad = mykad;
-  formid(localStorage.fid);
   var dob = mykad.substr(0,6); 	 // eg: 850510 - 10/05/1985
   var code = mykad.substr(6,2);	 // eg: 14 - Wilayah Persekutuan
   var icno = mykad.substr(8,4);	 // eg: 0000 - ic number
@@ -410,9 +415,7 @@ $('#mykad').change(function(){
   $('#day_date').val(third);
   $('#month_date').val(second);
   $('#year_date').val(year);
-  return false;
-});
-
+}
 
 //paging warga emas
 if (localStorage.age <= 60){
@@ -469,6 +472,7 @@ function formid(fid){
 function showf(fid){
   myObj = JSON.parse(window.localStorage.getItem('b2b'));
   $('#mykad').val( myObj.f[(fid-1)].mykad ); //show mykad into input box
+  reshowformdata()
 }
 
 // $("p").append("Some appended text."
