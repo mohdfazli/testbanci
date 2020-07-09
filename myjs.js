@@ -391,7 +391,6 @@ function reshowformdata(){
   var second = dob.substr(2, 2); // 05
   var third = dob.substr(4,2);   // 10
 
-
   //convert 850510 to 85-05-10 : dateformat - yy-mm-dd
   var dateraw = first+'-'+second+'-'+third;
   $('#e5a').val(dateraw);
@@ -401,6 +400,9 @@ function reshowformdata(){
   var birthDate = new Date($('#e5a').val());
   var age = today.getFullYear() - birthDate.getFullYear();
   var m = today.getMonth() - birthDate.getMonth();
+  if (age<0){
+    age=age+100;
+  }
   if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
     age--;
   }
@@ -408,13 +410,13 @@ function reshowformdata(){
   localStorage.age = age;
 
   // calculate age by dateraw : eg: 33
-  var date_convert_age = moment().diff(dateraw, 'years');
-  alert(date_convert_age);
+  //var date_convert_age = moment().diff(dateraw, 'years');
+  //alert(date_convert_age);
   // convert full date 85-05-10 to 1985-05-10
-  var year = moment(dateraw,"YY-MM-DD").format("YYYY");
-  $('#day_date').val(third);
-  $('#month_date').val(second);
-  $('#year_date').val(year);
+  // var year = moment(dateraw,"YY-MM-DD").format("YYYY");
+  // $('#day_date').val(third);
+  // $('#month_date').val(second);
+  // $('#year_date').val(year);
 }
 
 //paging warga emas
