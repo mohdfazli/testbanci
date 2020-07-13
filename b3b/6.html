@@ -30,17 +30,17 @@
       </div>
       <div class="form-group">
         <label for=""> No. K.P. Lama / Tentera / Polis / Sijil Lahir / Pasport / Dokumen Lain </label>
-        <input type="text" class="form-control" id="" placeholder="">
+        <input type="text" class="form-control" id="mykadlama" placeholder="">
       </div>
       <div class="form-group">
         <label for=""> No. Permit Kerja </label>
-        <input type="text" class="form-control" id="" placeholder="">
+        <input type="text" class="form-control" id="permitkerja" placeholder="">
       </div>
     </div>
     <div id="E2" class="">
       <div class="form-group">
         <label for="">E2. Apakah nama penuh anda / ahli Isi Rumah ini? </label>
-        <input type="text" class="form-control" id="" placeholder="">
+        <input type="text" class="form-control" id="nama" placeholder="">
       </div>
     </div>
     <div id="E3" class="">
@@ -49,27 +49,31 @@
         <select id="3r" class="form-control">
           <option value="">-Sila Pilih-</option>
           <option value="1">KETUA ISI RUMAH</option>
-          <option value="0">ISTERI / SUAMI KIR</option>
-          <option value="0">ANAK KIR YANG BELUM BERKAHWIN</option>
-          <option value="0">ANAK KIR YANG TELAH BERKAHWIN</option>
+          <option value="2">ISTERI / SUAMI KIR</option>
+          <option value="3">ANAK KIR YANG BELUM BERKAHWIN</option>
+          <option value="4">ANAK KIR YANG TELAH BERKAHWIN</option>
         </select>
       </div>
     </div>
     <div id="E4" class="">
       <div class="form-group">
         <label for="">E4. Jantina</label>
-        <input type="text" id="e4q" class="form-control" readonly>
+        <select  id="e4q" class="form-control" >
+          <option value="">-Sila Pilih-</option>
+          <option value="Lelaki">Lelaki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
       </div>
     </div>
     <div id="E5">
       <div class="form-group">
         <label for="">E5.(a) Bilakah tarikh lahir anda / ahli Isi Rumah ini? </label>
-        <input type="text" class="form-control" id="e5a" placeholder="" readonly>
+        <input type="text" class="form-control" id="e5a" placeholder="" >
       </div>
       <p>ATAU</p>
       <div class="form-group">
         <label for="">E5.(b) Berapakah umur anda / ahli Isi Rumah ini?  </label>
-        <input type="text" class="form-control" id="e5b" placeholder="" readonly>
+        <input type="text" class="form-control" id="e5b" placeholder="" >
       </div>
     </div>
     <div id="E6">
@@ -79,40 +83,40 @@
           <option value="">-Sila Pilih-</option>
           <option value="1">Tidak pernah berkahwin</option>
           <option value="2">Berkahwin</option>
-          <option value="">Balu / Duda</option>
-          <option value="">Bercerai</option>
-          <option value="">Berpisah</option>
+          <option value="3">Balu / Duda</option>
+          <option value="4">Bercerai</option>
+          <option value="5">Berpisah</option>
         </select>
       </div>
     </div>
     <div id="E7" class="">
       <div class="form-group">
         <label for="">E7. Apakah umur anda / ahli Isi Rumah ini pada perkahwinan pertama? </label>
-        <input type="number" class="form-control" id="" placeholder="">
+        <input type="number" class="form-control" id="e7" placeholder="">
       </div>
     </div>
     <div id="E8" class="">
       <div class="form-group">
         <label for="">E8. Apakah kumpulan etnik anda / ahli Isi Rumah ini? </label>
         <input type="number" class="form-control" id="" placeholder="">
-        <input type="text" class="form-control" id="" placeholder="Nyatakan">
+        <input type="text" class="form-control" id="e8etnik" placeholder="Nyatakan">
       </div>
     </div>
     <div id="E9">
       <div class="form-group">
         <label for="">E9. Apakah agama anda / ahli Isi Rumah ini </label>
-        <select id="jenisrumah" class="form-control">
+        <select id="e9agama" class="form-control">
           <option value="">-Sila Pilih-</option>
           <option value="1">Islam </option>
           <option value="2">Kristian </option>
-          <option value="2">Buddha  </option>
-          <option value="2">Hindu   </option>
+          <option value="3">Buddha  </option>
+          <option value="4">Hindu   </option>
           <option value="non">lain-lain   </option>
         </select>
       </div>
-      <div id="c1" style="display: none;">
+      <div id="e9lain">
         <div class="form-group">
-          <input type="text" class="form-control" id="c1-b" placeholder="Sila Nyatakan" style="">
+          <input type="text" class="form-control" id="e9agamalain" placeholder="Lain-lain Agama (Nyatakan)" style="">
         </div>
       </div>
     </div>
@@ -184,7 +188,7 @@
   </div>
 
   <div class="container p-2">
-    <a href="index.html" class="float-leftright btn btn-primary">Back</a>
+    <a href="b3b_list.html" class="float-leftright btn btn-primary">Back</a>
     <a href="7.html" class="float-right btn btn-primary">Next</a>
   </div>
 
@@ -194,5 +198,6 @@
   <script src="../popper.min.js" ></script>
   <script src="../bootstrap/js/bootstrap.min.js"></script>
   <script src="../myjs.js"></script>
+  <script src="data3b.js"></script>
 </body>
 </html>
