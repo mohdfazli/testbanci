@@ -6,21 +6,8 @@ if (localStorage.getItem("b2b") === null) {
   var qs = ts.toLocaleString();
   myObj = {
     "f":[ {
-      has_identification_document:'',
       mykad:'',
-      other_identification_number:'',
       tvisit: qs,
-      permit:'',
-      name:'',
-      rel_hh:'',
-      marr_stat:'',
-      age_at_first_marriage:'',
-      religion:'',
-      religion_others:'',
-      rece:'' ,
-      // birth_state_id:'' ,
-      // birth_country_id:'' ,
-      // residence_status:'',
     } ]
   };
   myJSON = JSON.stringify(myObj);

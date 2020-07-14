@@ -123,33 +123,14 @@
     <div id="E10" class="">
       <p>E10. Di manakah tempat lahir anda / ahli Isi Rumah ini? </p>
       <div class="form-group">
-        <div class="form-check">
-          <input class="form-check-input c8cRadios" type="radio" name="c8cRad" id="" value="ada">
-          <label class="form-check-label" for="exampleRadios2">
-            Malaysia
-          </label>
-          <div type="radio" class="" id="c8-bekal" placeholder="" style="display:none;">
-            <div class="form-check">
-              <input class="form-control c8-b-2" type="text" name="c8cRadios" id="" placeholder="Negeri Dilahirkan" >
-            </div>
-            <div class="form-check">
-              <input class="form-control c8-b-2" type="text" name="c8cRadios" id="" value=""  placeholder="Nyatakan" >
-            </div>
-          </div>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input c8cRadios" type="radio" name="c8cRad" id="" value="tiada">
-          <label class="form-check-label" for="exampleRadios2">
-            Luar Malaysia
-          </label>
-          <div type="radio" class="" id="c8-xbekal" placeholder="" style="display:none;">
-            <div class="form-check">
-              <input class="form-control c8-b-2" type="text" name="c8cxRadios" id="" placeholder="Negara Dilahirkan">
-            </div>
-            <div class="form-check">
-              <input class="form-control c8-b-2" type="text" name="c8cxRadios" id="" placeholder="Nyatakan">
-            </div>
-          </div>
+        <select id="e10tempatlahir" class="form-control">
+          <option value="">-Sila Pilih-</option>
+          <option value="malaysia">Malaysia </option>
+          <option value="luarmalaysia">Luar Malaysia </option>
+        </select>
+        <div class="">
+          <input type="text" class="form-control" name="" id="e10negerilahir" placeholder="nyatakan negeri lahir">
+          <input type="text" class="form-control" name="" id="e10negaralahir" placeholder="nyatakan negara lahir">
         </div>
       </div>
     </div>

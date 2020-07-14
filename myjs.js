@@ -396,6 +396,36 @@ $( "#e20q" ).change(function() {
   }
 });
 
+$( "#e10tempatlahir" ).change(function() {
+  if(this.value=="luarmalaysia"){
+    $("#e10negerilahir").hide();
+    $("#e10negaralahir").show();
+  }
+  else if(this.value=="malaysia"){
+    $("#e10negerilahir").show();
+    $("#e10negaralahir").hide();
+  }
+  else{
+    $("#e10negerilahir").hide();
+    $("#e10negaralahir").hide();
+  }
+});
+$( "#e10tempatlahir" ).ready(function() {
+  if(this.value=="luarmalaysia"){
+    $("#e10negerilahir").hide();
+    $("#e10negaralahir").show();
+  }
+  else if(this.value=="malaysia"){
+    $("#e10negerilahir").show();
+    $("#e10negaralahir").hide();
+  }
+  else{
+    $("#e10negerilahir").hide();
+    $("#e10negaralahir").hide();
+  }
+});
+
+
 // $("p").append("Some appended text."
 // $(document).ready(function(){
 //   $("#tambahb").click(function(){

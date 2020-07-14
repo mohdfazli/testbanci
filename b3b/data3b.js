@@ -6,9 +6,9 @@ $('body').ready(function(){
 });
 
 //update data inside local storage for 3B form whenever the input is changed
-$('#mykad, #e1aq, #mykad, #mykadlama, #permitkerja,#nama, #3r, #e6q, #e7, #e9agama, #e9agamalain, #e8etnik').change(function(){
+$('#mykad, #e1aq, #mykad, #mykadlama, #permitkerja,#nama, #3r, #e6q, #e7, #e9agama, #e9agamalain, #e8etnik, #e10tempatlahir').change(function(){
   formid(localStorage.fid); //insert form data into local storage
-  reshowformdata()
+  reshowformdata();
   return false;
 });
 
@@ -27,6 +27,7 @@ function formid(fid){
   myObj.f[(fid-1)].religion = $('#e9agama').val();
   myObj.f[(fid-1)].religion_others = $('#e9agamalain').val();
   myObj.f[(fid-1)].rece = $('#e8etnik').val();
+  myObj.f[(fid-1)].birth_malaysia = $('#e10tempatlahir').val();
   // myObj.f[(fid-1)].birth_state_id = $('#isi').val();
   // myObj.f[(fid-1)].birth_country_id = $('#isi').val();
   // myObj.f[(fid-1)].residence_status = $('#isi').val();
@@ -49,7 +50,8 @@ function showf(fid){
   $('#e9agama').val( myObj.f[(fid-1)].religion );
   $('#e9agamalain').val(myObj.f[(fid-1)].religion_others );
   $('#e8etnik').val( myObj.f[(fid-1)].rece );
-  reshowformdata()
+  $('#e10tempatlahir').val(myObj.f[(fid-1)].birth_malaysia);
+  reshowformdata();
 }
 
 function reshowformdata(){
