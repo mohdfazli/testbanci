@@ -6,7 +6,7 @@ $('body').ready(function(){
 });
 
 //update data inside local storage for 3B form whenever the input is changed
-$('#mykad, #e1aq, #mykad, #mykadlama, #permitkerja,#nama, #3r, #e6q, #e7, #e9agama, #e9agamalain, #e8etnik, #e10tempatlahir').change(function(){
+$('#mykad, #e1aq, #mykad, #mykadlama, #permitkerja,#nama, #3r, #e6q, #e7, #e9agama, #e9agamalain, #e8etnik, #e10tempatlahir').keyup(function(){
   formid(localStorage.fid); //insert form data into local storage
   reshowformdata();
   return false;
