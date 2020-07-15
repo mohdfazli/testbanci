@@ -9,19 +9,19 @@
   <title></title>
 </head>
 <body>
-  <div class="container-fluid pb-2" style="background-color: #eee;">
+  <div class="container-fluid pb-2" id="3b-page2" style="background-color: #eee;">
     <h4 class="text-center">PERSEORANGAN</h4>
     <div id="E12">
       <div id="E12-i" class="form-group">
         <p>E12. Di manakah tempat tinggal biasa anda/ahli Isi Rumah ini pada satu (1) tahun yang lalu? </p>
         <label for=""> Adakah alamat seperti di Bahagian B? </label>
-        <select id="jenisrumah" class="form-control">
+        <select id="e12-i" class="form-control popnextparentdiv">
           <option value="">-Sila Pilih-</option>
-          <option value="1">Alamat sama</option>
-          <option value="non">Alamat lain</option>
+          <option value="1">Alamat Tempat Kediaman ini </option>
+          <option value="non">Alamat lain (nyatakan)</option>
         </select>
       </div>
-      <div id="c1" style="display: none;">
+      <div id="c1" class="popthis" style="display: none;">
         <div class="form-group">
           <label for="">Nama bandar / kampung  </label>
           <input type="text" class="form-control" id="" placeholder="Nama bandar">
@@ -43,11 +43,12 @@
     <div id="E13">
       <div id="E13-i" class="form-group">
         <p>E13. Di manakah tempat tinggal biasa anda / ahli Isi Rumah ini pada lima (5) tahun yang lalu? </p>
-        <label for=""> Adakah alamat seperti di Bahagian B? </label>
-        <select id="" class="form-control has-others">
+        <label for=""> Adakah alamat seperti di Bahagian E12 (2) ? </label>
+        <select id="" class="form-control popnextparentdiv">
           <option value="">-Sila Pilih-</option>
           <option value="1">Alamat sama</option>
-          <option value="non">Alamat lain</option>
+          <option value="2">Alamat lain seperti di E12 (2)</option>
+          <option value="non">Alamat lain snyatakan</option>
         </select>
       </div>
       <div id="ch2" style="display: none;">
@@ -162,17 +163,19 @@
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox4" id="c8bcbox" value="non">
+            <input class="form-check-input c8-b popnext2" type="checkbox" name="c8b-checkbox4" id="c8bcbox" value="non">
             <label class="form-check-label" for="c8bcheckbox">
               Sumber lain (Nyatakan)
             </label>
-            <input type="text" class="form-control" id="c8b-lain" placeholder="" style="display: none;">
+            <div class="popthis" style="display: none;">
+              <input type="text" class="form-control" id="c8b-lain" placeholder="" >
+            </div>
           </div>
       </div>
     </div>
     <div id="E15" class="form-group">
         <label for="">D15. Apakah peringkat pendidikan tertinggi yang dicapai / masih menuntut oleh anda / ahli Isi Rumah ini? </label>
-        <select id="" class="form-control ada-lain">
+        <select id="" class="form-control popnext">
           <option value="">-Sila Pilih-</option>
           <option value="1">Pra sekolah (Umur 3 - 6 tahun</option>
           <option value="2">Pendidikan rendah (Tahun 1 - 6)</option>
@@ -237,7 +240,6 @@
           <input type="text" class="form-control" id="" placeholder="">
         </div>
     </div>
-
   </div>
 
   <div class="container p-2">

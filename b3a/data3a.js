@@ -6,13 +6,13 @@ $('body').ready(function(){
 });
 
 //update data inside local storage for 3B form whenever the input is changed
-$('input, select').change(function(){
+$('#mykad, #e1aq, #mykad, #mykadlama, #permitkerja,#nama, #3r, #e6q, #e7, #e9agama, #e9agamalain, #e8etnik, #e10tempatlahir').keyup(function(){
   formid(localStorage.fid); //insert form data into local storage
   reshowformdata();
   return false;
 });
-//is_malaysian_citizen
-//#mykad, #e1aq, #mykad, #mykadlama, #permitkerja,#nama, #3r, #e6q, #e7, #e9agama, #e9agamalain, #e8etnik, #e10tempatlahir, #is_malaysian_citizen
+
+
 // insert new form data(mykad) into local storage
 function formid(fid){
   myObj = JSON.parse(window.localStorage.getItem('b2b'));
@@ -28,13 +28,6 @@ function formid(fid){
   myObj.f[(fid-1)].religion_others = $('#e9agamalain').val();
   myObj.f[(fid-1)].rece = $('#e8etnik').val();
   myObj.f[(fid-1)].birth_malaysia = $('#e10tempatlahir').val();
-  myObj.f[(fid-1)].is_malaysian_citizen = $('#e11aq').val();
-
-  myObj.f[(fid-1)].can_read = $("input[name='d10ltf']:checked").val();
-  myObj.f[(fid-1)].can_write = $("input[name='d10mtf']:checked").val();
-  myObj.f[(fid-1)].can_count = $("input[name='d10ntf']:checked").val();
-
-  // myObj.f[(fid-1)].is_malaysian_citizen = $('#e12-i').val();
   // myObj.f[(fid-1)].birth_state_id = $('#isi').val();
   // myObj.f[(fid-1)].birth_country_id = $('#isi').val();
   // myObj.f[(fid-1)].residence_status = $('#isi').val();
@@ -58,14 +51,6 @@ function showf(fid){
   $('#e9agamalain').val(myObj.f[(fid-1)].religion_others );
   $('#e8etnik').val( myObj.f[(fid-1)].rece );
   $('#e10tempatlahir').val(myObj.f[(fid-1)].birth_malaysia);
-  $('#e11aq').val(myObj.f[(fid-1)].is_malaysian_citizen);
-
-
-  $("input[name='d10ltf'][ value = "+myObj.f[(fid-1)].can_read+" ]").prop('checked', true);
-  $("input[name='d10mtf'][ value = "+myObj.f[(fid-1)].can_write+" ]").prop('checked', true);
-  $("input[name='d10ntf'][ value = "+myObj.f[(fid-1)].can_count+" ]").prop('checked', true);
-
-  $('#e12-i').val();
   reshowformdata();
 }
 

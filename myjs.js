@@ -36,34 +36,47 @@ $( ".c8-q" ).click(function() {
   }
 });
 
-$( ".has-others" ).change(function() {
-  if(this.value=="non"){
-    $("#ch2").show();
-  }
-  else{
-    $("#ch2").hide();
-  }
-});
 
 ////-------show lain-lain input box start----////
 
-$( ".ada-lain" ).change(function() {
+$( ".popnext" ).change(function() {
   if(this.value=="non"){
-    $(this).next().css( "display", "block" );
+    $(this).next().show();
   }
   else{
-    $(this).next().css( "display", "none" );
+    $(this).next().hide();
+  }
+});
+
+$( ".popnext2" ).change(function() {
+  if(this.value=="non"){
+    $(this).next().next().show();
+  }
+  else{
+    $(this).next().next().hide();
+  }
+});
+
+$( ".popnextparentdiv" ).change(function() {
+  if(this.value=="non"){
+    $(this).parent().next().show();
+  }
+  else{
+    $(this).parent().next().hide();
   }
 });
 
 $( ".lain-ckbox" ).click(function() {
   if(this.value=="1"){
-    $(".lain-ckbox").parent().parent().parent().parent().next().css( "display", "block" );
+    $(this).parent().parent().parent().parent().next().show();
   }
   else{
-    $(".lain-ckbox").parent().parent().parent().parent().next().css( "display", "none" );
+    $(this).parent().parent().parent().parent().next().hide();
   }
 });
+
+
+
 
 ////-------show lain-lain input box end----////
 
