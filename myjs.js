@@ -1,20 +1,10 @@
 
-
 $( "#jenisrumah" ).change(function() {
   if(this.value=="non"){
     $("#c1").show();
   }
   else{
     $("#c1").hide();
-  }
-});
-
-$( ".form-check-input,c1-b-2" ).click(function() {
-  if(this.value=="non"){
-    $("#c1-b-2q").show();
-  }
-  else{
-    $("#c1-b-2q").hide();
   }
 });
 
@@ -26,16 +16,6 @@ $( ".c2-q" ).click(function() {
     $("#c2-lain").hide();
   }
 });
-
-$( ".c8-q" ).click(function() {
-  if(this.value=="non"){
-    $("#c8-lain").show();
-  }
-  else{
-    $("#c8-lain").hide();
-  }
-});
-
 
 ////-------show lain-lain input box start----////
 
@@ -76,8 +56,6 @@ $( ".lain-ckbox" ).click(function() {
 });
 
 
-
-
 ////-------show lain-lain input box end----////
 
 $( ".c8-b" ).click(function() {
@@ -89,65 +67,30 @@ $( ".c8-b" ).click(function() {
   }
 });
 
-//-----------calculate total minutes in SENARAI SEMAK-------
-$( "#hingga" ).change(function() {
-  var ftime = $("#dari").val();
-  var ltime = $("#hingga").val();
-  $("#jumlahminit").val(( new Date("1970-1-1 "+  ltime ) - new Date("1970-1-1 "+ ftime ))/1000/60);
-});
-$( "#dari" ).change(function() {
-  var ftime = $("#dari").val();
-  var ltime = $("#hingga").val();
-  $("#jumlahminit").val(( new Date("1970-1-1 "+  ltime ) - new Date("1970-1-1 "+ ftime ))/1000/60);
-
-});
-
-//-----------calculate total minutes in SENARAI SEMAK end-------
-
 //-------tree show hide
 
 $( ".ltk" ).click(function() {
   if(this.value=="1"){
     $("#sesebuah").show();
-    $("#berkembar").hide();
-    $("#teres").hide();
-    $("#berkelompok").hide();
-    $("#rumah-bandar").hide();
+    $("#berkembar, #teres, #berkelompok, #rumah-bandar").hide();
   }
   else if(this.value=="2"){
-    $("#sesebuah").hide();
+    $("#sesebuah, #teres, #berkelompok, #rumah-bandar").hide();
     $("#berkembar").show();
-    $("#teres").hide();
-    $("#berkelompok").hide();
-    $("#rumah-bandar").hide();
-
   }
   else if(this.value=="3"){
-    $("#sesebuah").hide();
-    $("#berkembar").hide();
+    $("#sesebuah, #berkembar, #berkelompok, #rumah-bandar").hide();
     $("#teres").show();
-    $("#berkelompok").hide();
-    $("#rumah-bandar").hide();
-
   }
   else if(this.value=="4"){
-    $("#sesebuah").hide();
-    $("#berkembar").hide();
-    $("#teres").hide();
+    $("#sesebuah, #berkembar, #teres, #rumah-bandar").hide();
     $("#berkelompok").show();
-    $("#rumah-bandar").hide();
-
   }
   else if(this.value=="5"){
-    $("#sesebuah").hide();
-    $("#berkembar").hide();
-    $("#teres").hide();
-    $("#berkelompok").hide();
+    $("#sesebuah, #berkembar, #teres, #berkelompok").hide();
     $("#rumah-bandar").show();
-
   }
 });
-
 
 //-------tree show hide end
 
@@ -165,8 +108,6 @@ $( ".c8cRadios" ).click(function() {
 });
 
 ////----------------c8c-----------////
-
-
 
 ////----------------table radiobox-----------////
 
@@ -201,8 +142,150 @@ $( ".lain-c7f" ).click(function() {
 //   });
 // });
 
-//borang setiap ahli isi rumah
 
+//-------------dirty show hide start--
+
+$( "#e1aq" ).change(function() {
+  if(this.value=="2"){
+    $("#E-1b").hide();
+  }
+  else{
+    $("#E-1b").show();
+  }
+});
+
+$( "#e6q" ).change(function() {
+  if(this.value=="1"){
+    $("#E7").hide();
+  }
+  else{
+    $("#E7").show();
+  }
+});
+
+$( "#e11aq" ).change(function() {
+  if(this.value=="1"){
+    $("#E11-b, #E11-c").hide();
+  }
+  else{
+    $("#E11-b, #E11-c").show();
+  }
+});
+
+$( "#e14bq" ).change(function() {
+  if(this.value=="0"){
+    $("#E14-c").show();
+    $("#E15, #E16, #E17, #E18").hide();
+  }
+  else{
+    $("#E14-c").hide();
+    $("#E15, #E16, #E17, #E18").show();
+  }
+});
+
+$( "#e28a" ).change(function() {
+  if(this.value=="2"){
+    $("#E28-b, #E28-c").hide();
+  }
+  else{
+    $("#E28-b, #E28-c").show();
+  }
+});
+
+$( "#h2aq" ).change(function() {
+  if(this.value=="2"){
+    $("#h2-b, #H3").hide();
+  }
+  else{
+    $("#h2-b, #H3").show();
+  }
+});
+
+$(".c2-q").click(function() {
+  if(this.value=="1"){
+    $("#c3, #c4, #c5, #c6, #c7, #c8").show();
+  }
+  else{
+    $("#c3, #c4, #c5, #c6, #c7, #c8").hide();
+    $("#nextend").attr("href", "../profile.html");
+  }
+});
+
+$( "#c1c" ).change(function() {
+  if(this.value=="111"){
+    $("#c1-b-2q").hide();
+  }
+  else{
+    $("#c1-b-2q").show();
+  }
+});
+
+$( "#k3-p, #k3-l" ).keyup(function() {
+  var p = parseInt($("#k3-p").val());
+  var l = parseInt($("#k3-l").val());
+  var total = p+l;
+  $("#k3-total").val(total);
+  localStorage.k3total = total;
+});
+
+//paging warga emas
+if (localStorage.age <= 60){
+  $("#3b-page5").hide();
+}else{ $("#3b-page5").show(); }
+
+//perempuan umur > 10
+if (localStorage.gender == "Lelaki" || localStorage.age < 10){
+  $("#E28").hide();
+}
+
+$( "#e19q" ).change(function() {
+  if(this.value=="1"){
+    $("#E20, #E21, #E22").hide();
+  }
+  else{
+    $("#E20, #E21, #E22").show();
+  }
+});
+
+$( "#e20q" ).change(function() {
+  if(this.value=="1"){
+    $("#E21, #E22").hide();
+    $("#E23, #E24, #E25, #E26").show();
+  }
+  else{
+    $("#E21, #E22").show();
+    $("#E23, #E24, #E25, #E26").hide();
+  }
+});
+
+$( "#e10tempatlahir" ).ready(function() {
+  if(this.value=="luarmalaysia"){
+    $("#e10negerilahir").hide();
+    $("#e10negaralahir").show();
+  }
+  else if(this.value=="malaysia"){
+    $("#e10negerilahir").show();
+    $("#e10negaralahir").hide();
+  }
+  else{
+    $("#e10negerilahir, #e10negaralahir").hide();
+  }
+});
+
+//-----------calculate total minutes in SENARAI SEMAK-------
+$( "#hingga" ).change(function() {
+  var ftime = $("#dari").val();
+  var ltime = $("#hingga").val();
+  $("#jumlahminit").val(( new Date("1970-1-1 "+  ltime ) - new Date("1970-1-1 "+ ftime ))/1000/60);
+});
+$( "#dari" ).change(function() {
+  var ftime = $("#dari").val();
+  var ltime = $("#hingga").val();
+  $("#jumlahminit").val(( new Date("1970-1-1 "+  ltime ) - new Date("1970-1-1 "+ ftime ))/1000/60);
+
+});
+
+//borang setiap ahli isi rumah
 $(document).ready(function(){
   $("#cardspace").empty();
   var count = 2 ;
@@ -243,200 +326,7 @@ function vcard(){
   $('div[id^="visitcard"]:last').children("div").first().children("h5").text("Lawatan ke - "+num);
 }
 
-
-
-
-//-------------dirty show hide start--
-
-$( "#e1aq" ).change(function() {
-  if(this.value=="2"){
-    $("#E-1b").css( "display", "none" );
-  }
-  else{
-    $("#E-1b").css( "display", "block" );
-  }
-});
-
-$( "#e1aq" ).change(function() {
-  if(this.value=="2"){
-    $("#E-1b").css( "display", "none" );
-  }
-  else{
-    $("#E-1b").css( "display", "block" );
-  }
-});
-
-$( "#e6q" ).change(function() {
-  if(this.value=="1"){
-    $("#E7").css( "display", "none" );
-  }
-  else{
-    $("#E7").css( "display", "block" );
-  }
-});
-
-$( "#e11aq" ).change(function() {
-  if(this.value=="1"){
-    $("#E11-b").css( "display", "none" );
-    $("#E11-c").css( "display", "none" );
-  }
-  else{
-    $("#E11-b").css( "display", "block" );
-    $("#E11-c").css( "display", "block" );
-  }
-});
-
-$( "#e14bq" ).change(function() {
-  if(this.value=="0"){
-    $("#E14-c").css( "display", "block" );
-    $("#E15").css( "display", "none" );
-    $("#E16").css( "display", "none" );
-    $("#E17").css( "display", "none" );
-    $("#E18").css( "display", "none" );
-  }
-  else{
-    $("#E14-c").css( "display", "none" );
-    $("#E15").css( "display", "block" );
-    $("#E16").css( "display", "block" );
-    $("#E17").css( "display", "block" );
-    $("#E18").css( "display", "block" );
-  }
-});
-
-$( "#e28a" ).change(function() {
-  if(this.value=="2"){
-    $("#E28-b").css( "display", "none" );
-    $("#E28-c").css( "display", "none" );
-  }
-  else{
-    $("#E28-b").css( "display", "block" );
-    $("#E28-c").css( "display", "block" );
-  }
-});
-
-$( "#h2aq" ).change(function() {
-  if(this.value=="2"){
-    $("#h2-b").css( "display", "none" );
-    $("#H3").css( "display", "none" );
-  }
-  else{
-    $("#h2-b").css( "display", "block" );
-    $("#H3").css( "display", "block" );
-  }
-});
-
-$(".c2-q").click(function() {
-  if(this.value=="1"){
-    $("#c3").css( "display", "block" );
-    $("#c4").css( "display", "block" );
-    $("#c5").css( "display", "block" );
-    $("#c6").css( "display", "block" );
-    $("#c7").css( "display", "block" );
-    $("#c8").css( "display", "block" );
-
-
-  }
-  else{
-    $("#c3").css( "display", "none" );
-    $("#c4").css( "display", "none" );
-    $("#c5").css( "display", "none" );
-    $("#c6").css( "display", "none" );
-    $("#c7").css( "display", "none" );
-    $("#c8").css( "display", "none" );
-    $("#nextend").attr("href", "../profile.html");
-
-  }
-});
-
-$( "#c1c" ).change(function() {
-  if(this.value=="111"){
-    $("#c1-b-2q").css( "display", "none" );
-  }
-  else{
-    $("#c1-b-2q").css( "display", "block" );
-  }
-});
-
-$( "#k3-p, #k3-l" ).keyup(function() {
-  var p = parseInt($("#k3-p").val());
-  var l = parseInt($("#k3-l").val());
-  var total = p+l;
-  $("#k3-total").val(total);
-  localStorage.k3total = total;
-});
-
-
-//paging warga emas
-if (localStorage.age <= 60){
-  $("#9to10").attr("href", "11.html");
-  $("#11to10").attr("href", "9.html");
-}
-
-//perempuan umur > 10
-if (localStorage.gender == "Lelaki" || localStorage.age < 10){
-  $("#E28").hide();
-}
-
-$( "#e19q" ).change(function() {
-  if(this.value=="1"){
-    $("#E20").hide();
-    $("#E21").hide();
-    $("#E22").hide();
-  }
-  else{
-    $("#E20").show();
-    $("#E21").show();
-    $("#E22").show();
-  }
-});
-
-$( "#e20q" ).change(function() {
-  if(this.value=="1"){
-    $("#E21").hide();
-    $("#E22").hide();
-    $("#E23").show();
-    $("#E24").show();
-    $("#E25").show();
-    $("#E26").show();
-  }
-  else{
-    $("#E21").show();
-    $("#E22").show();
-    $("#E23").hide();
-    $("#E24").hide();
-    $("#E25").hide();
-    $("#E26").hide();
-  }
-});
-
-$( "#e10tempatlahir" ).change(function() {
-  if(this.value=="luarmalaysia"){
-    $("#e10negerilahir").hide();
-    $("#e10negaralahir").show();
-  }
-  else if(this.value=="malaysia"){
-    $("#e10negerilahir").show();
-    $("#e10negaralahir").hide();
-  }
-  else{
-    $("#e10negerilahir").hide();
-    $("#e10negaralahir").hide();
-  }
-});
-$( "#e10tempatlahir" ).ready(function() {
-  if(this.value=="luarmalaysia"){
-    $("#e10negerilahir").hide();
-    $("#e10negaralahir").show();
-  }
-  else if(this.value=="malaysia"){
-    $("#e10negerilahir").show();
-    $("#e10negaralahir").hide();
-  }
-  else{
-    $("#e10negerilahir").hide();
-    $("#e10negaralahir").hide();
-  }
-});
+//-----------calculate total minutes in SENARAI SEMAK end-------
 
 
 // $("p").append("Some appended text."

@@ -38,7 +38,7 @@
     <div id="E2" class="">
       <div class="form-group">
         <label for="">E2. Apakah nama penuh anda / ahli Isi Rumah ini? </label>
-        <input type="text" class="form-control" id="nama" placeholder="">
+        <input type="text" class="form-control text-uppercase" id="nama" placeholder="">
       </div>
     </div>
     <div id="E3" class="">
@@ -174,19 +174,19 @@
       <div id="c1" class="popthis" style="display: none;">
         <div class="form-group">
           <label for="">Nama bandar / kampung  </label>
-          <input type="text" class="form-control" id="" placeholder="Nama bandar">
+          <input type="text" class="form-control" id="1ytown" placeholder="Nama bandar">
         </div>
         <div class="form-group">
           <label for="">Mukim / Daerah (Kelantan) / Daerah Kecil (Sarawak) </label>
-          <input type="text" class="form-control" id="" placeholder="Mukim">
+          <input type="text" class="form-control" id="1ymukim" placeholder="Mukim">
         </div>
         <div class="form-group">
           <label for="">Daerah Pentadbiran / Jajahan (Kelantan) </label>
-          <input type="text" class="form-control" id="" placeholder="Daerah Pentadbiran">
+          <input type="text" class="form-control" id="1ydistrict" placeholder="Daerah Pentadbiran">
         </div>
         <div class="form-group">
           <label for="">Negeri / Negara </label>
-          <input type="text" class="form-control" id="" placeholder="Negeri / Negara ">
+          <input type="text" class="form-control" id="1ystate" placeholder="Negeri / Negara ">
         </div>
       </div>
     </div>
@@ -204,19 +204,19 @@
       <div id="ch2" style="display: none;">
         <div class="form-group">
           <label for="">Nama bandar / kampung  </label>
-          <input type="text" class="form-control" id="" placeholder="Nama bandar">
+          <input type="text" class="form-control" id="5ytown" placeholder="Nama bandar">
         </div>
         <div class="form-group">
           <label for="">Mukim / Daerah (Kelantan) / Daerah Kecil (Sarawak) </label>
-          <input type="text" class="form-control" id="" placeholder="Mukim">
+          <input type="text" class="form-control" id="5ymukim" placeholder="Mukim">
         </div>
         <div class="form-group">
           <label for="">Daerah Pentadbiran / Jajahan (Kelantan) </label>
-          <input type="text" class="form-control" id="" placeholder="Daerah Pentadbiran">
+          <input type="text" class="form-control" id="5ydistrict" placeholder="Daerah Pentadbiran">
         </div>
         <div class="form-group">
           <label for="">Negeri / Negara </label>
-          <input type="text" class="form-control" id="" placeholder="Negeri / Negara ">
+          <input type="text" class="form-control" id="5ystate" placeholder="Negeri / Negara ">
         </div>
       </div>
     </div>
@@ -314,18 +314,13 @@
           </div>
           <div class="form-check">
             <input class="form-check-input c8-b popnext2" type="checkbox" name="c8b-checkbox4" id="c8bcbox" value="non">
-            <label class="form-check-label" for="c8bcheckbox">
-              Sumber lain (Nyatakan)
-            </label>
-            <div class="popthis" style="display: none;">
-              <input type="text" class="form-control" id="c8b-lain" placeholder="" >
-            </div>
+            <input type="text" class="form-control w-75" id="c8b-lain" placeholder="Lain-lain (Nyatakan)" >
           </div>
       </div>
     </div>
     <div id="E15" class="form-group">
         <label for="">D15. Apakah peringkat pendidikan tertinggi yang dicapai / masih menuntut oleh anda / ahli Isi Rumah ini? </label>
-        <select id="" class="form-control popnext">
+        <select id="highest_edu" class="form-control popnext">
           <option value="">-Sila Pilih-</option>
           <option value="1">Pra sekolah (Umur 3 - 6 tahun</option>
           <option value="2">Pendidikan rendah (Tahun 1 - 6)</option>
@@ -345,7 +340,7 @@
     </div>
     <div id="E16" class="form-group">
         <label for="">D16. Apakah sijil tertinggi yang diperoleh oleh anda / ahli Isi Rumah ini? </label>
-        <select id="" class="form-control ">
+        <select id="highest_cert" class="form-control ">
           <option value="">-Sila Pilih-</option>
           <option value="1">Tiada Sijil </option>
           <option value="2">UPSR / UPSRA atau yang setaraf </option>
@@ -363,7 +358,8 @@
     </div>
     <div id="E17" class="form-group">
         <label for="">D17. Dari manakah anda / ahli Isi Rumah ini memperoleh sijil / diploma / ijazah tersebut? </label>
-        <select id="" class="form-control ">
+        <select id="e17q" class="form-control ">
+          <option value=""> -Sila Pilih- </option>
           <option value="1">Institusi Awam dalam Negara </option>
           <option value="2">Institusi Swasta dalam Negara </option>
           <option value="3">Institusi luar Negara </option>
@@ -372,7 +368,7 @@
     <div id="E18">
         <div id="E18-a" class="form-group">
           <label for="">D18.(a) Apakah bidang pengajian utama anda / ahli Isi Rumah ini bagi sijil tertinggi yang diperoleh? </label>
-          <select id="" class="form-control ">
+          <select id="e18aq" class="form-control ">
             <option value="">-Sila Pilih-</option>
             <option value="1">Program Asas</option>
             <option value="2">Pendidikan</option>
@@ -386,8 +382,8 @@
           </select>
         </div>
         <div id="E18-b" class="form-group">
-          <label for="">D18.(b) Nyatakan bidang pengajian utama anda / ahli Isi Rumah ini secara ringkas. </label>
-          <input type="text" class="form-control" id="" placeholder="">
+          <label for="e18bq">D18.(b) Nyatakan bidang pengajian utama anda / ahli Isi Rumah ini secara ringkas. </label>
+          <input type="text" class="form-control" id="e18bq" placeholder="">
         </div>
     </div>
   </div>
@@ -420,7 +416,7 @@
     </div>
     <div id="E22" class="form-group">
       <label for="">E22. Apakah sebab UTAMA anda / ahli Isi Rumah ini tidak mencari pekerjaan? </label>
-      <select id="" class="form-control">
+      <select id="e22q" class="form-control">
         <option value="">-Sila Pilih-</option>
         <option value="1">Bersekolah / Masih belajar / Program latihan </option>
         <option value="2">Kerja rumah / Tanggungjawab keluarga / Komuniti </option>
@@ -441,47 +437,47 @@
       <div id="E23-a" class="form-group">
         <p>E23. Pekerjaan</p>
         <label for="">E23.(a) Apakah pekerjaan anda / ahli Isi Rumah ini?</label>
-        <input type="text" class="form-control" id="" placeholder="Pekerjaan">
+        <input type="text" class="form-control" id="e23aq" placeholder="Pekerjaan">
       </div>
       <div id="E23-b" class="form-group">
         <label for="">E23.(b) Apakah kategori pekerjaan anda / ahli Isi Rumah ini?</label>
-        <select id="" class="form-control">
+        <select id="e23bq" class="form-control">
           <option value="">-Sila Pilih-</option>
-          <option value="">Pengurus</option>
-          <option value="">Profesional</option>
-          <option value="">Juruteknik dan Profesional Bersekutu </option>
-          <option value="">Pekerja Sokongan Perkeranian </option>
-          <option value="">Pekerja Perkhidmatan dan Jualan </option>
-          <option value="">Pekerja Mahir Pertanian, Perhutanan, Penternakan dan Perikanan </option>
-          <option value="">Pekerja Kemahiran dan Pekerja Pertukangan yang berkaitan </option>
-          <option value="">Operator Mesin dan Loji, dan Pemasang </option>
-          <option value="">Pekerjaan Asas </option>
+          <option value="1">Pengurus</option>
+          <option value="2">Profesional</option>
+          <option value="3">Juruteknik dan Profesional Bersekutu </option>
+          <option value="4">Pekerja Sokongan Perkeranian </option>
+          <option value="5">Pekerja Perkhidmatan dan Jualan </option>
+          <option value="6">Pekerja Mahir Pertanian, Perhutanan, Penternakan dan Perikanan </option>
+          <option value="7">Pekerja Kemahiran dan Pekerja Pertukangan yang berkaitan </option>
+          <option value="8">Operator Mesin dan Loji, dan Pemasang </option>
+          <option value="9">Pekerjaan Asas </option>
         </select>
       </div>
       <div id="E23-c" class="form-group">
         <label for="">E23.(c) Apakah tugas/jenis kerja anda/ahli Isi Rumah ini secara terperinci? </label>
-        <input type="text" class="form-control" id="" placeholder="Tugas">
+        <input type="text" class="form-control" id="e23cq" placeholder="Tugas">
       </div>
     </div>
     <div id="E24" class="">
       <div id="E24-a" class="form-group">
         <label for="">E24.(a) Apakah nama syarikat/majikan anda/ahli Isi Rumah ini?(Jika berkenaan) </label>
-        <input type="text" class="form-control" id="" placeholder="Tugas">
+        <input type="text" class="form-control" id="e24aq" placeholder="Tugas">
       </div>
       <div id="E24-b" class="form-group">
         <label for="">E24.(b) Apakah aktiviti utama syarikat/majikan anda/ahli Isi Rumah Ini? </label>
-        <select id="" class="form-control">
+        <select id="e24bq" class="form-control">
           <option value="">-Sila Pilih-</option>
-          <option value="">Pertanian</option>
-          <option value="">Perlombongan dan Pengkuarian</option>
-          <option value="">Pembuatan</option>
-          <option value="">Pembinaan</option>
-          <option value="">Perkhidmatan</option>
+          <option value="1">Pertanian</option>
+          <option value="2">Perlombongan dan Pengkuarian</option>
+          <option value="3">Pembuatan</option>
+          <option value="4">Pembinaan</option>
+          <option value="5">Perkhidmatan</option>
         </select>
       </div>
       <div id="E24-c" class="form-group">
         <label for="">E24.(c) Nyatakan aktiviti utama tersebut secara ringkas? </label>
-        <input type="text" class="form-control" id="" placeholder="Aktiviti Utama">
+        <input type="text" class="form-control" id="e24cq" placeholder="Aktiviti Utama">
       </div>
       <div id="E24-d" class="">
         <p>E24.(d) Di manakah lokasi biasa tempat  kerja anda / ahli Isi Rumah ini?</p>
@@ -519,7 +515,7 @@
     </div>
     <div id="E25" class="form-group">
       <label for="">E25. Apakah taraf pekerjaan anda / ahli Isi Rumah ini?</label>
-      <select id="" class="form-control">
+      <select id="e25q" class="form-control">
         <option value="">-Sila Pilih-</option>
         <option value="1">Majikan </option>
         <option value="2">Pekerja kerajaan </option>
@@ -532,7 +528,7 @@
     <div id="E26" class="">
       <div id="E26-a" class="form-group">
         <label for="">E26.(a) Dalam minggu yang lepas, apakah mod pengangkutan anda/ahli Isi Rumah ini ke tempat kerja?(Jawapan berganda diterima)</label>
-        <select id="" class="form-control">
+        <select id="e26aq" class="form-control">
           <option value="">-Sila Pilih-</option>
           <option value="1">Keretapi (termasuk Komuter, LRT, MRT, Monorel dan ERL) </option>
           <option value="2">Bas</option>
@@ -549,7 +545,7 @@
       </div>
       <div id="E26-b" class="form-group">
         <label for="">E26.(b) Berapakah jarak dari Tempat Kediaman ke tempat kerja anda / ahli Isi Rumah ini?</label>
-        <select id="" class="form-control">
+        <select id="e26bq" class="form-control">
           <option value="">-Sila Pilih-</option>
           <option value="1">0-15 KM</option>
           <option value="2">16-30 KM</option>
@@ -629,7 +625,7 @@
       </div>
       <div id="E27-b" class="form-group">
         <label for="">E27.(b) Adakah anda / ahli Isi Rumah ini merupakan Orang Kurang Upaya (OKU)? </label>
-        <select id="" class="form-control">
+        <select id="e27bq" class="form-control">
           <option value="">-Sila Pilih-</option>
           <option value="1">Ya, berdaftar </option>
           <option value="2">Ya, tidak berdaftar </option>
@@ -638,7 +634,7 @@
       </div>
       <div id="E27-c" class="form-group">
         <label for="">E27.(c) Apakah pendidikan khas yang diterima oleh anda / ahli Isi Rumah ini? </label>
-        <select id="" class="form-control">
+        <select id="e27cq" class="form-control">
           <option value="">-Sila Pilih-</option>
           <option value="1">Program Pendidikan Khas Integrasi </option>
           <option value="2">Sekolah Pendidikan Khas  </option>
@@ -651,7 +647,7 @@
     <div id="E28" class="">
       <div id="E28-a" class="form-group">
         <label for="">E28.(a) Pernahkah anda / ahli Isi Rumah ini melahirkan anak? </label>
-        <select id="e28a" class="form-control">
+        <select id="e28aq" class="form-control">
           <option value="">-Sila Pilih-</option>
           <option value="1">Ya</option>
           <option value="2">Tidak </option>
@@ -660,16 +656,16 @@
       <div id="E28-b" class="form-group">
         <p>E28.(b) Berapakah bilangan anak yang dilahirkan hidup? (Jika tiada, catatkan “00”) </p>
         <label for="">Lelaki</label>
-        <input type="number" class="form-control" id="" placeholder="Lelaki">
+        <input type="number" class="form-control" id="e28b1q" placeholder="Lelaki">
         <label for="">Perempuan</label>
-        <input type="number" class="form-control" id="" placeholder="Perempuan">
+        <input type="number" class="form-control" id="e28b2q" placeholder="Perempuan">
       </div>
       <div id="E28-c" class="form-group">
         <p>E28.(c) Berapakah daripadanya yang masih hidup sekarang? (Jika tiada, catatkan “00”) </p>
         <label for="">Lelaki</label>
-        <input type="number" class="form-control" id="" placeholder="Lelaki">
+        <input type="number" class="form-control" id="e28c1q" placeholder="Lelaki">
         <label for="">Perempuan</label>
-        <input type="number" class="form-control" id="" placeholder="Perempuan">
+        <input type="number" class="form-control" id="e28c2q" placeholder="Perempuan">
       </div>
     </div>
   </div>
@@ -678,7 +674,7 @@
     <h4 class="text-center">KESIHATAN DAN KECERGASAN</h4>
     <div id="F1" class="form-group">
       <label for="">F1. Dalam sebulan yang lepas, apakah tahap kesihatan anda/ahli Isi Rumah ini? </label>
-      <select id="" class="form-control">
+      <select id="f1q" class="form-control">
         <option value="">-Sila Pilih-</option>
         <option value="1">Sangat tidak baik </option>
         <option value="2">tidak baik </option>
@@ -725,22 +721,22 @@
           <td><input name="f2f" type="radio" value="2"></td>
         </tr>
         <tr>
-          <td>(f.) Barah </td>
+          <td>(g.) Barah </td>
           <td><input name="f2g" type="radio" value="1"></td>
           <td><input name="f2g" type="radio" value="2"></td>
         </tr>
         <tr>
-          <td>(f.) Batuk kering </td>
+          <td>(h.) Batuk kering </td>
           <td><input name="f2h" type="radio" value="1"></td>
           <td><input name="f2h" type="radio" value="2"></td>
         </tr>
         <tr>
-          <td>(f.) Penyakit batu karang </td>
+          <td>(i.) Penyakit batu karang </td>
           <td><input name="f2i" type="radio" value="1"></td>
           <td><input name="f2i" type="radio" value="2"></td>
         </tr>
         <tr>
-          <td>(f.) Alzheimer </td>
+          <td>(j.) Alzheimer </td>
           <td><input name="f2j" type="radio" value="1"></td>
           <td><input name="f2j" type="radio" value="2"></td>
         </tr>
@@ -748,11 +744,11 @@
     </div>
     <div id="F3" class="form-group">
       <label for="">F3. Dalam sebulan yang lepas, berapa anggaran kekerapan anda/ahli Isi Rumah ini mendapatkan perkhidmatan/rawatan di fasiliti kesihatan?</label>
-      <input type="number" class="form-control" id="" placeholder="Kali">
+      <input type="number" class="form-control" id="f3q" placeholder="Kali">
     </div>
     <div id="F4" class="form-group">
       <label for="">F4. Dalam sebulan yang lepas, berapakah anggaran perbelanjaan anda/ahli Isi Rumah ini untuk tujuan perubatan? </label>
-      <select id="" class="form-control">
+      <select id="f4q" class="form-control">
         <option value="">-Sila Pilih-</option>
         <option value="1">RM99 dan kurang</option>
         <option value="2">RM100 - RM249 </option>
@@ -772,55 +768,110 @@
         </tr>
         <tr>
           <td>(a.) Insurans melalui syarikat / majikan  </td>
-          <td><input name="f2a" type="radio" value="1"></td>
-          <td><input name="f2a" type="radio" value="2"></td>
+          <td><input name="f5a" type="radio" value="1"></td>
+          <td><input name="f5a" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(b.) Insurans melalui Kesatuan </td>
-          <td><input name="f2b" type="radio" value="1"></td>
-          <td><input name="f2b" type="radio" value="2"></td>
+          <td><input name="f5b" type="radio" value="1"></td>
+          <td><input name="f5b" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(c.) Insurans melalui bekas majikan </td>
-          <td><input name="f2c" type="radio" value="1"></td>
-          <td><input name="f2c" type="radio" value="2"></td>
+          <td><input name="f5c" type="radio" value="1"></td>
+          <td><input name="f5c" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(d.) Dibeli sendiri </td>
-          <td><input name="f2d" type="radio" value="1"></td>
-          <td><input name="f2d" type="radio" value="2"></td>
+          <td><input name="f5d" type="radio" value="1"></td>
+          <td><input name="f5d" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(e.) Dibeli oleh ahli Isi Rumah lain </td>
-          <td><input name="f2e" type="radio" value="1"></td>
-          <td><input name="f2e" type="radio" value="2"></td>
+          <td><input name="f5e" type="radio" value="1"></td>
+          <td><input name="f5e" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(f.) Lain-lain (Nyatakan) </td>
-          <td><input name="f2f" type="radio" value="1" class="lain-ckbox"></td>
-          <td><input name="f2f" type="radio" value="2" class="lain-ckbox"></td>
+          <td><input name="f5f" type="radio" value="1" class="lain-ckbox"></td>
+          <td><input name="f5f" type="radio" value="2" class="lain-ckbox"></td>
         </tr>
       </table>
-      <input type="number" class="form-control" id="c7f-lain" placeholder="lain" style="display:none;">
+      <input type="number" class="form-control" id="f5fq" placeholder="lain" style="display:none;">
     </div>
     <div id="F6" class="form-group">
-        <label for="">F6. Apakah peringkat pendidikan tertinggi yang dicapai / masih menuntut oleh anda / ahli Isi Rumah ini? </label>
-        <select id="" class="form-control popnext">
-          <option value="">-Sila Pilih-</option>
-          <option value="1">Briskwalking </option>
-          <option value="2">Berlari </option>
-          <option value="3">Rekreasi </option>
-          <option value="4">Berbasikal </option>
-          <option value="5">Berenang </option>
-          <option value="6">Aktiviti gimnasium </option>
-          <option value="7">Zumba / Aerobik </option>
-          <option value="8">Taichi / Yoga </option>
-          <option value="9">e-Sport </option>
-          <option value="10">Sukan lasak </option>
-          <option value="11">Tiada </option>
-          <option value="non">Lain-lain (Nyatakan) </option>
-        </select>
-        <input type="text" class="form-control" id="" placeholder="" style="display: none;">
+        <label for="">F6. Apakah jenis aktiviti sukan atau senaman yang anda sering lakukan? (Jawapan berganda diterima) </label>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox1" id="" value="1">
+          <label class="form-check-label" for="c8checkbox">
+            Briskwalking
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox2" id="" value="2">
+          <label class="form-check-label" for="c8checkbox">
+            Berlari
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox3" id="" value="3">
+          <label class="form-check-label" for="c8checkbox">
+            Rekreasi
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox3" id="" value="4">
+          <label class="form-check-label" for="c8checkbox">
+            Berbasikal
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox3" id="" value="5">
+          <label class="form-check-label" for="c8checkbox">
+            Berenang
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox3" id="" value="6">
+          <label class="form-check-label" for="c8checkbox">
+            Aktiviti gimnasium
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox3" id="" value="7">
+          <label class="form-check-label" for="c8checkbox">
+            Zumba / Aerobik
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox3" id="" value="8">
+          <label class="form-check-label" for="c8checkbox">
+            Taichi / Yoga
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox3" id="" value="9">
+          <label class="form-check-label" for="c8checkbox">
+            e-Sport
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox3" id="" value="9">
+          <label class="form-check-label" for="c8checkbox">
+            Sukan lasak
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b" type="checkbox" name="c8b-checkbox3" id="" value="9">
+          <label class="form-check-label" for="c8checkbox">
+            Tiada
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input c8-b popnext2" type="checkbox" name="c8b-checkbox4" id="c8bcbox" value="non">
+          <input type="text" class="form-control w-75" id="f6bq" placeholder="Lain-lain (Nyatakan)">
+        </div>
+        <input type="text" class="form-control" id="f6bq" placeholder="" style="display: none;">
     </div>
     <h4 class="text-center">HUBUNGAN SOSIAL</h4>
     <div id="G1" class="form-group">
@@ -833,38 +884,38 @@
         </tr>
         <tr>
           <td>(a.) Facebook </td>
-          <td><input name="G1a" type="radio" value="1"></td>
-          <td><input name="G1a" type="radio" value="2"></td>
+          <td><input name="g1a" type="radio" value="1"></td>
+          <td><input name="g1a" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(b.) WhatsApp </td>
-          <td><input name="G1b" type="radio" value="1"></td>
-          <td><input name="G1b" type="radio" value="2"></td>
+          <td><input name="g1b" type="radio" value="1"></td>
+          <td><input name="g1b" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(c.) Instagram </td>
-          <td><input name="G1c" type="radio" value="1"></td>
-          <td><input name="G1c" type="radio" value="2"></td>
+          <td><input name="g1c" type="radio" value="1"></td>
+          <td><input name="g1c" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(d.) Twitter </td>
-          <td><input name="G1d" type="radio" value="1"></td>
-          <td><input name="G1d" type="radio" value="2"></td>
+          <td><input name="g1d" type="radio" value="1"></td>
+          <td><input name="g1d" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(e.) LinkedIn </td>
-          <td><input name="G1e" type="radio" value="1"></td>
-          <td><input name="G1e" type="radio" value="2"></td>
+          <td><input name="g1e" type="radio" value="1"></td>
+          <td><input name="g1e" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(f.) Telegram </td>
-          <td><input name="G1f" type="radio" value="1" class="lain-c7f"></td>
-          <td><input name="G1f" type="radio" value="2" class="lain-c7f"></td>
+          <td><input name="g1f" type="radio" value="1" class="lain-c7f"></td>
+          <td><input name="g1f" type="radio" value="2" class="lain-c7f"></td>
         </tr>
         <tr>
           <td>(g.) Lain-lain (Nyatakan) </td>
-          <td><input name="G1g" type="radio" value="1" class="lain-ckbox"></td>
-          <td><input name="G1g" type="radio" value="2" class="lain-ckbox"></td>
+          <td><input name="g1g" type="radio" value="1" class="lain-ckbox"></td>
+          <td><input name="g1g" type="radio" value="2" class="lain-ckbox"></td>
         </tr>
       </table>
       <input type="number" class="form-control" id="" placeholder="lain" style="display:none;">
@@ -879,91 +930,93 @@
         </tr>
         <tr>
           <td>(a.) Rumah </td>
-          <td><input name="G2a" type="radio" value="1"></td>
-          <td><input name="G2a" type="radio" value="2"></td>
+          <td><input name="g2a" type="radio" value="1"></td>
+          <td><input name="g2a" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(b.) Tempat bekerja </td>
-          <td><input name="G2b" type="radio" value="1"></td>
-          <td><input name="G2b" type="radio" value="2"></td>
+          <td><input name="g2b" type="radio" value="1"></td>
+          <td><input name="g2b" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(c.) Rumah orang lain </td>
-          <td><input name="G2c" type="radio" value="1"></td>
-          <td><input name="G2c" type="radio" value="2"></td>
+          <td><input name="g2c" type="radio" value="1"></td>
+          <td><input name="g2c" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(d.) Kemudahan akses internet percuma </td>
-          <td><input name="G2d" type="radio" value="1"></td>
-          <td><input name="G2d" type="radio" value="2"></td>
+          <td><input name="g2d" type="radio" value="1"></td>
+          <td><input name="g2d" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(e.) Kemudahan akses internet komuniti </td>
-          <td><input name="G2e" type="radio" value="1"></td>
-          <td><input name="G2e" type="radio" value="2"></td>
+          <td><input name="g2e" type="radio" value="1"></td>
+          <td><input name="g2e" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(f.) Pusat pendidikan </td>
-          <td><input name="G2f" type="radio" value="1"></td>
-          <td><input name="G2f" type="radio" value="2"></td>
+          <td><input name="g2f" type="radio" value="1"></td>
+          <td><input name="g2f" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(g.) Data mudah alih </td>
-          <td><input name="G2g" type="radio" value="1"></td>
-          <td><input name="G2g" type="radio" value="2"></td>
+          <td><input name="g2g" type="radio" value="1"></td>
+          <td><input name="g2g" type="radio" value="2"></td>
         </tr>
       </table>
     </div>
     <div id="G3" class="form-group">
       <label for="">G3. Dalam tempoh tujuh (7) hari yang lepas, adakah anda / ahli Isi Rumah ini makan bersama? Sekiranya Ya, nyatakan berapa kali.</label>
-      <table style="width:100%">
+      <table class="container table" >
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Makanan</th>
+            <th scope="col">Ya</th>
+            <th scope="col">Tidak</th>
+            <th scope="col">Kali</th>
+          </tr>
+        </thead>
         <tr>
-          <th>Makanan</th>
-          <th>Ya</th>
-          <th>Tidak</th>
-          <th>Kali</th>
-        </tr>
-        <tr>
-          <td>(a.) Sarapan </td>
+          <th scope="row">(a.) Sarapan </th>
           <td><input name="g3atf" type="radio" value="1"></td>
           <td><input name="g3atf" type="radio" value="0"></td>
-          <td><input name="g3ak" type="number" class="g3kali" value="0"></td>
+          <td><input name="g3ak" id="g3ak" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
-          <td>(b.) Kudapan </td>
+          <th scope="row">(b.) Kudapan </th>
           <td><input name="g3btf" type="radio" value="1"></td>
           <td><input name="g3btf" type="radio" value="0"></td>
-          <td><input name="g3bk" type="number" class="g3kali" value="0"></td>
+          <td><input name="g3bk" id="g3bk" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
-          <td>(c.) Makan tengahari </td>
+          <th scope="row">(c.) Makan tengahari </th>
           <td><input name="g3ctf" type="radio" value="1"></td>
           <td><input name="g3ctf" type="radio" value="0"></td>
-          <td><input name="g3ck" type="number" class="g3kali" value="0"></td>
+          <td><input name="g3ck" id="g3ck" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
-          <td>(d.) Minum petang </td>
+          <th scope="row">(d.) Minum petang </th>
           <td><input name="g3dtf" type="radio" value="1"></td>
           <td><input name="g3dtf" type="radio" value="0"></td>
-          <td><input name="g3dk" type="number" class="g3kali" value="0"></td>
+          <td><input name="g3dk" id="g3dk" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
-          <td>(e.) Makan malam </td>
+          <th scope="row">(e.) Makan malam </th>
           <td><input name="g3etf" type="radio" value="1"></td>
           <td><input name="g3etf" type="radio" value="0"></td>
-          <td><input name="g3ek" type="number" class="g3kali" value="0"></td>
+          <td><input name="g3ek" id="g3ek" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
-          <td>(f.) Makan lewat malam </td>
+          <th scope="row">(f.) Makan lewat malam </th>
           <td><input name="g3ftf" type="radio" value="1"></td>
           <td><input name="g3ftf" type="radio" value="0"></td>
-          <td><input name="g3fk" type="number" class="g3kali" value="0"></td>
+          <td><input name="g3fk" id="g3fk" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
       </table>
     </div>
     <div id="G4" class="form-group">
       <label for="">G4. Dalam sebulan yang lepas, berapa kalikah anda / ahli Isi Rumah ini bertegur secara bersemuka dengan jiran? </label>
-      <select id="" class="form-control">
+      <select id="g4q" class="form-control">
         <option value="">-Sila Pilih-</option>
         <option value="1">Setiap hari </option>
         <option value="2">Sekurang-kurangnya sekali seminggu </option>
@@ -974,7 +1027,7 @@
     <h4 class="text-center">PERUMAHAN</h4>
     <div id="H1" class="form-group">
       <label for="">H1. Adakah anda/ahli Isi Rumah ini memiliki Tempat Kediaman lain di Malaysia? </label>
-      <select id="" class="form-control">
+      <select id="h1q" class="form-control">
         <option value="">-Sila Pilih-</option>
         <option value="1">Ya </option>
         <option value="2">Tidak </option>
@@ -991,7 +1044,7 @@
       </div>
       <div id="h2-b" class="form-group">
         <label for="">H2.(b) Sekiranya Ya, apakah jangka masa anda / ahli Isi Rumah ini ingin memiliki Tempat Kediaman tersebut? </label>
-        <select id="" class="form-control">
+        <select id="h2bq" class="form-control">
           <option value="">-Sila Pilih-</option>
           <option value="1">Ya </option>
           <option value="2">Tidak </option>
@@ -1001,7 +1054,7 @@
     <div id="H3" class="">
       <div id="h3-a" class="form-group">
           <label for="">H3.(a) Apakah pilihan utama jenis Tempat Kediaman yang anda/ahli Isi Rumah ingin miliki? </label>
-          <select id="" class="form-control">
+          <select id="h3aq" class="form-control">
             <option value="">-Sila Pilih-</option>
             <option value="1">Sesebuah </option>
             <option value="2">Berkembar </option>
@@ -1019,7 +1072,7 @@
       </div>
       <div id="h3-b" class="form-group">
           <label for="">H3.(b) Berapakah harga Tempat Kediaman yang mampu dimiliki oleh anda / ahli Isi Rumah ini? </label>
-          <select id="" class="form-control">
+          <select id="h3bq" class="form-control">
             <option value="">-Sila Pilih-</option>
             <option value="1">RM100 ribu dan kurang  </option>
             <option value="2">RM101 - RM300 ribu </option>
@@ -1032,10 +1085,10 @@
       <div id="h3-c" class="form-group">
         <p>H3.(c) Di manakah lokasi pilihan Tempat Kediaman yang ingin dimiliki oleh anda / ahli Isi Rumah ini? </p>
         <label for="">(i.) Daerah</label>
-        <input type="number" class="form-control" id="" placeholder="Nyatakan">
+        <input type="text" class="form-control" id="h3c1q" placeholder="Nyatakan">
         <input type="number" class="form-control" id="" placeholder="Kod Daerah">
         <label for="">(ii.) Negeri</label>
-        <input type="number" class="form-control" id="" placeholder="Nyatakan">
+        <input type="text" class="form-control" id="h3c2q" placeholder="Nyatakan">
         <input type="number" class="form-control" id="" placeholder="Kod Negeri">
       </div>
     </div>
@@ -1053,33 +1106,33 @@
         </tr>
         <tr>
           <td>(a.) Aktiviti keagamaan </td>
-          <td><input name="f2a" type="radio" value="1"></td>
-          <td><input name="f2a" type="radio" value="2"></td>
+          <td><input name="i1a" type="radio" value="1"></td>
+          <td><input name="i1a" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(b.) Aktiviti yang menjana pendapatan </td>
-          <td><input name="f2b" type="radio" value="1"></td>
-          <td><input name="f2b" type="radio" value="2"></td>
+          <td><input name="i1b" type="radio" value="1"></td>
+          <td><input name="i1b" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(c.) Aktiviti kesukanan / riadah </td>
-          <td><input name="f2c" type="radio" value="1"></td>
-          <td><input name="f2c" type="radio" value="2"></td>
+          <td><input name="i1c" type="radio" value="1"></td>
+          <td><input name="i1c" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(d.) Aktiviti dengan komuniti / persatuan / politik  </td>
-          <td><input name="f2d" type="radio" value="1"></td>
-          <td><input name="f2d" type="radio" value="2"></td>
+          <td><input name="i1d" type="radio" value="1"></td>
+          <td><input name="i1d" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(e.) Aktiviti kesukarelawanan  </td>
-          <td><input name="f2e" type="radio" value="1"></td>
-          <td><input name="f2e" type="radio" value="2"></td>
+          <td><input name="i1e" type="radio" value="1"></td>
+          <td><input name="i1e" type="radio" value="2"></td>
         </tr>
         <tr>
           <td>(f.) Aktiviti hiburan/melancong  </td>
-          <td><input name="f2f" type="radio" value="1"></td>
-          <td><input name="f2f" type="radio" value="2"></td>
+          <td><input name="i1f" type="radio" value="1"></td>
+          <td><input name="i1f" type="radio" value="2"></td>
         </tr>
       </table>
     </div>
@@ -1263,18 +1316,18 @@
     <div id="semak1" class="form-group">
       <h4>PERAKUAN MAKLUMAT OLEH RESPONDEN</h4>
       <label for="">Nama</label>
-      <input type="number" class="form-control" id="" placeholder="Nama">
+      <input type="text" class="form-control text-uppercase" id="nama_responden" placeholder="Nama Responden">
       <label for="">Nombor Pengenalan diri</label>
-      <input type="number" class="form-control" id="" placeholder="Nombor Pengenalan diri">
+      <input type="number" class="form-control" id="id_responden" placeholder="Nombor Pengenalan diri">
       <label for="">Tarikh</label>
-      <input type="date" class="form-control" id="" placeholder="Tarikh">
+      <input type="date" class="form-control" id="tarikh_borang" placeholder="Tarikh">
       <p>Saya mengesahkan maklumat yang diberikan dalam borang soal selidik ini adalah benar, lengkap dan tepat. </p>
     </div>
     <div id="semak2" class="form-group">
       <h4>ULASAN PEMBANCI</h4>
       <div class="form-group">
         <label for="">Ulasan</label>
-        <textarea class="form-control" id="" rows="3"></textarea>
+        <textarea type="text" class="form-control" id="ulasan" rows="3"></textarea>
       </div>
       <div class="form-group">
         <p class="d-inline">Maklumat lengkap hanya diperoleh selepas lawatan yang kali ke</p>

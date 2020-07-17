@@ -8,6 +8,12 @@ if (localStorage.getItem("b2b") === null) {
     "f":[ {
       mykad:'',
       tvisit: qs,
+      makan_sarapan : 0,
+      makan_kudapan : 0,
+      makan_tengahari : 0,
+      makan_petang : 0,
+      makan_malam : 0,
+      makan_lewatmlm : 0,
     } ]
   };
   myJSON = JSON.stringify(myObj);
@@ -19,12 +25,23 @@ function newform(){
   var ts = new Date();
   var qs = ts.toLocaleString();
   myObj = JSON.parse(window.localStorage.getItem('b2b'));
-  p = {mykad: "", name:"",tvisit: qs };
+  p = {
+    mykad: "",
+    name:"",
+    tvisit: qs,
+    makan_sarapan : 0,
+    makan_kudapan : 0,
+    makan_tengahari : 0,
+    makan_petang : 0,
+    makan_malam : 0,
+    makan_lewatmlm : 0,
+    };
   myObj.f.push(p);
   myJSON = JSON.stringify(myObj);
   localStorage.setItem("b2b", myJSON);
 }
 myObj = JSON.parse(localStorage.getItem('b2b'));
+
 
 //generate list of all 3B form that exist in local storage including empty form
 $( "#3blist" ).append( "<table><tr><th>MyKad/Name</th><th class=pl-2>Created On</th><th class=pl-2>Status</th></tr>" );
