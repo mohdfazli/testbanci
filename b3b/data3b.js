@@ -2,6 +2,7 @@
 
 $('body').ready(function(){
   showf(localStorage.fid); //show form data on input
+  showhideq(localStorage.fid); //show hide question on page ready
   return false;
 });
 
@@ -157,6 +158,7 @@ function showf(fid){
   $('#e6q').val( z.marr_stat );
   $('#e7').val( z.age_at_first_marriage );
   $('#e9agama').val( z.religion );
+
   $('#e9agamalain').val(z.religion_others );
   $('#e8etnik').val( z.rece );
   $('#e10tempatlahir').val(z.birth_malaysia);
@@ -324,3 +326,85 @@ function reshowformdata(){
   // $('#month_date').val(second);
   // $('#year_date').val(year);
 }
+
+function showhideq(fid){
+  myObj = JSON.parse(window.localStorage.getItem('b2b'));
+  z = myObj.f[(fid-1)];
+  //--------1
+  if(z.has_identification_document=="2"){
+    $("#E-1b").hide();
+  }
+  else{
+    $("#E-1b").show();
+  }
+  //--------2
+  if(z.marr_stat=="1"){
+    $("#E7").hide();
+  }
+  else{
+    $("#E7").show();
+  }
+  //---------3
+  $( ".popnext" ).filter(function() {
+    return $(this).val() == "non"
+  }).next().show();
+
+  //---------4
+  if(z.is_malaysian_citizen=="1"){
+    $("#E11-b, #E11-c").hide();
+  }
+  else{
+    $("#E11-b, #E11-c").show();
+  }
+  //---------5
+  if(z.current_edu=="0"){
+    $("#E14-c").show();
+    $("#E15, #E16, #E17, #E18").hide();
+  }
+  else{
+    $("#E14-c").hide();
+    $("#E15, #E16, #E17, #E18").show();
+  }
+  //---------6
+  if(z.past_work_7day=="1"){
+    $("#E20, #E21, #E22").hide();
+  }
+  else{
+    $("#E20, #E21, #E22").show();
+  }
+  //---------7
+  if(z.has_work_later=="1"){
+    $("#E21, #E22").hide();
+    $("#E23, #E24, #E25, #E26").show();
+  }
+  else{
+    $("#E21, #E22").show();
+    $("#E23, #E24, #E25, #E26").hide();
+  }
+  //----------8
+  if(z.has_work_later=="1"){
+    $("#E22").hide();
+  }
+  else{
+    $("#E22").show();
+  }
+  //----------9
+  if(z.house_plan=="2"){
+    $("#h2-b, #H3").hide();
+  }
+  else{
+    $("#h2-b, #H3").show();
+  }
+  //----------10
+  //----------11
+}
+
+
+// function agama(op){
+//   if(op=="non"){
+//     $("#e9agama").next().show();
+//   }
+//   else{
+//     $("#e9agama").next().hide();
+//   }
+// }

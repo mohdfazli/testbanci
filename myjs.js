@@ -19,6 +19,7 @@ $( ".c2-q" ).click(function() {
 
 ////-------show lain-lain input box start----////
 
+
 $( ".popnext" ).change(function() {
   if(this.value=="non"){
     $(this).next().show();
@@ -109,25 +110,6 @@ $( ".c8cRadios" ).click(function() {
 
 ////----------------c8c-----------////
 
-////----------------table radiobox-----------////
-
-$( ".lain-c5f" ).click(function() {
-  if(this.value=="1"){
-    $("#c5f-lain").show();
-  }
-  else{
-    $("#c5f-lain").hide();
-  }
-});
-
-$( ".lain-c7f" ).click(function() {
-  if(this.value=="1"){
-    $("#c7f-lain").show();
-  }
-  else{
-    $("#c7f-lain").hide();
-  }
-});
 
 //------------------tambah borang---------//
 
@@ -163,7 +145,7 @@ $( "#e6q" ).change(function() {
   }
 });
 
-$( "#e11aq" ).change(function() {
+$("#e11aq").change(function() {
   if(this.value=="1"){
     $("#E11-b, #E11-c").hide();
   }
@@ -255,6 +237,15 @@ $( "#e20q" ).change(function() {
   else{
     $("#E21, #E22").show();
     $("#E23, #E24, #E25, #E26").hide();
+  }
+});
+
+$( "#e21q" ).change(function() {
+  if(this.value=="1"){
+    $("#E22").hide();
+  }
+  else{
+    $("#E22").show();
   }
 });
 
