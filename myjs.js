@@ -19,7 +19,6 @@ $( ".c2-q" ).click(function() {
 
 ////-------show lain-lain input box start----////
 
-
 $( ".popnext" ).change(function() {
   if(this.value=="non"){
     $(this).next().show();
@@ -67,33 +66,6 @@ $( ".c8-b" ).click(function() {
     $("#c8b-lain").hide();
   }
 });
-
-//-------tree show hide
-
-$( ".ltk" ).click(function() {
-  if(this.value=="1"){
-    $("#sesebuah").show();
-    $("#berkembar, #teres, #berkelompok, #rumah-bandar").hide();
-  }
-  else if(this.value=="2"){
-    $("#sesebuah, #teres, #berkelompok, #rumah-bandar").hide();
-    $("#berkembar").show();
-  }
-  else if(this.value=="3"){
-    $("#sesebuah, #berkembar, #berkelompok, #rumah-bandar").hide();
-    $("#teres").show();
-  }
-  else if(this.value=="4"){
-    $("#sesebuah, #berkembar, #teres, #rumah-bandar").hide();
-    $("#berkelompok").show();
-  }
-  else if(this.value=="5"){
-    $("#sesebuah, #berkembar, #teres, #berkelompok").hide();
-    $("#rumah-bandar").show();
-  }
-});
-
-//-------tree show hide end
 
 ////----------------c8c-----------////
 

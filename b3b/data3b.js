@@ -55,6 +55,8 @@ function formid(fid){
   z.finding_work = $('#e21q').val();
   z.why_nofindwork = $('#e22q').val();
   z.occupation = $('#e23aq').val();
+  z.work_location = $('#e24dq').val();
+  z.work_location2 = $('#e24dxq').val();
   z.nature_of_work = $('#e23bq').val();
   z.work_info = $('#e23cq').val();
   z.employer_name = $('#e24aq').val();
@@ -196,6 +198,8 @@ function showf(fid){
   $('#e24aq').val(z.employer_name);
   $('#e24bq').val(z.employer_field);
   $('#e24cq').val(z.employer_main_activity_desc);
+  $('#e24dq').val(z.work_location);
+  $('#e24dxq').val(z.work_location2);
   $('#e25q').val(z.work_level);
   $('#e26aq').val(z.work_transport);
   $('#e26bq').val(z.work_distance);
@@ -348,7 +352,6 @@ function showhideq(fid){
   $( ".popnext" ).filter(function() {
     return $(this).val() == "non"
   }).next().show();
-
   //---------4
   if(z.is_malaysian_citizen=="1"){
     $("#E11-b, #E11-c").hide();
@@ -370,24 +373,20 @@ function showhideq(fid){
     $("#E20, #E21, #E22").hide();
   }
   else{
-    $("#E20, #E21, #E22").show();
+    if(z.has_work_later=="1"){
+      $("#E21, #E22").hide();
+    }
+    else{
+      $("#E23, #E24, #E25, #E26").hide();
+      if(z.finding_work=="1"){
+        $("#E22").hide();
+      }
+    }
   }
   //---------7
-  if(z.has_work_later=="1"){
-    $("#E21, #E22").hide();
-    $("#E23, #E24, #E25, #E26").show();
-  }
-  else{
-    $("#E21, #E22").show();
-    $("#E23, #E24, #E25, #E26").hide();
-  }
+
   //----------8
-  if(z.has_work_later=="1"){
-    $("#E22").hide();
-  }
-  else{
-    $("#E22").show();
-  }
+
   //----------9
   if(z.house_plan=="2"){
     $("#h2-b, #H3").hide();

@@ -457,7 +457,7 @@
         <input type="text" class="form-control" id="e23cq" placeholder="Tugas">
       </div>
     </div>
-    <div id="E24" class="">
+    <div id="E24" class="form-group">
       <div id="E24-a" class="form-group">
         <label for="">E24.(a) Apakah nama syarikat/majikan anda/ahli Isi Rumah ini?(Jika berkenaan) </label>
         <input type="text" class="form-control" id="e24aq" placeholder="Tugas">
@@ -479,36 +479,31 @@
       </div>
       <div id="E24-d" class="">
         <p>E24.(d) Di manakah lokasi biasa tempat  kerja anda / ahli Isi Rumah ini?</p>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input c8cRadios" type="radio" name="c8cRad" id="" value="ada">
-            <label class="form-check-label" for="exampleRadios2">
-              Malaysia
-            </label>
-            <div type="radio" class="" id="c8-bekal" placeholder="" style="display:none;">
-              <div class="form-check">
-                <input class="form-control c8-b-2" type="text" name="c8cRadios" id="" placeholder="Negeri tempat bekerja " >
-              </div>
-              <div class="form-check">
-                <input class="form-control c8-b-2" type="text" name="c8cRadios" id="" value=""  placeholder="Nyatakan" >
-              </div>
-            </div>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input c8cRadios" type="radio" name="c8cRad" id="" value="tiada">
-            <label class="form-check-label" for="exampleRadios2">
-              Luar Malaysia
-            </label>
-            <div type="radio" class="" id="c8-xbekal" placeholder="" style="display:none;">
-              <div class="form-check">
-                <input class="form-control c8-b-2" type="text" name="c8cxRadios" id="" placeholder="Negara tempat bekerja ">
-              </div>
-              <div class="form-check">
-                <input class="form-control c8-b-2" type="text" name="c8cxRadios" id="" placeholder="Nyatakan">
-              </div>
-            </div>
-          </div>
-        </div>
+        <select id="e24dq" class="form-control popnext">
+          <optgroup label="Malaysia">
+            <option value="" disabled selected>-Sila Pilih-</option>
+            <option value="1">Sabah</option>
+            <option value="2">Sarawak</option>
+            <option value="3">Selangor</option>
+            <option value="4">Perak</option>
+            <option value="5">Melaka</option>
+            <option value="6">Johor</option>
+            <option value="7">Negeri sembilan</option>
+            <option value="8">Pahang</option>
+            <option value="9">Terengganu</option>
+            <option value="10">Kedah</option>
+            <option value="11">Kelantan</option>
+            <option value="12">Perlis</option>
+            <option value="13">Pulau Pinang</option>
+            <option value="12">Kuala Lumpur</option>
+            <option value="13">Labuan</option>
+            <option value="14">Putrajaya</option>
+          </optgroup>
+          <optgroup label="Luar Malaysia">
+            <option value="non">Luar Malaysia (Nyatakan)</option>
+          </optgroup>
+          <input class="form-control" id="e24dxq" style="display:none;" placeholder="(Nyatakan)">
+        </select>
       </div>
     </div>
     <div id="E25" class="form-group">
@@ -969,45 +964,31 @@
         <thead class="thead-light">
           <tr>
             <th scope="col">Makanan</th>
-            <th scope="col">Ya</th>
-            <th scope="col">Tidak</th>
             <th scope="col">Kali</th>
           </tr>
         </thead>
         <tr>
           <th scope="row">(a.) Sarapan </th>
-          <td><input name="g3atf" type="radio" value="1"></td>
-          <td><input name="g3atf" type="radio" value="0"></td>
           <td><input name="g3ak" id="g3ak" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
           <th scope="row">(b.) Kudapan </th>
-          <td><input name="g3btf" type="radio" value="1"></td>
-          <td><input name="g3btf" type="radio" value="0"></td>
           <td><input name="g3bk" id="g3bk" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
           <th scope="row">(c.) Makan tengahari </th>
-          <td><input name="g3ctf" type="radio" value="1"></td>
-          <td><input name="g3ctf" type="radio" value="0"></td>
           <td><input name="g3ck" id="g3ck" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
           <th scope="row">(d.) Minum petang </th>
-          <td><input name="g3dtf" type="radio" value="1"></td>
-          <td><input name="g3dtf" type="radio" value="0"></td>
           <td><input name="g3dk" id="g3dk" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
           <th scope="row">(e.) Makan malam </th>
-          <td><input name="g3etf" type="radio" value="1"></td>
-          <td><input name="g3etf" type="radio" value="0"></td>
           <td><input name="g3ek" id="g3ek" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
         <tr>
           <th scope="row">(f.) Makan lewat malam </th>
-          <td><input name="g3ftf" type="radio" value="1"></td>
-          <td><input name="g3ftf" type="radio" value="0"></td>
           <td><input name="g3fk" id="g3fk" type="number" class="form-control form-control-sm col-4" value="0"></td>
         </tr>
       </table>
